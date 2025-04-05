@@ -1,8 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Semper Modding</title>
+    <link rel="stylesheet" href="web/css/main.css">
+    <script src="web/js/elements.js"></script>
+    <script src="web/js/search.js"></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages. Everyone who reads this is gay!</p>
-  <a href="/test/test.html">Click me</a>
+    <header>
+        <img src="resources/main/Main.png" alt="logo">
+        <h>Website Title</h>
+    </header>
+    <main>
+      <textarea placeholder="Search..." id="searchBar" onkeyup="searchMods()"></textarea>
+      <p>First line.</p>
+      <p>Second line.</p>
+      <p>Thrid line.</p>
+
+      <a href="mods/example_mod/wiki/r/test.html">Click me</a>
+
+
+      <!--Selection Drop down menu-->
+      <form>
+        <label for="number">Select Type:</label>
+        <select id="number" name="number">
+          <option value="items">Items</option>
+          <option value="blocks">Blocks</option>
+          <option value="fluids">Fluids</option>
+          <option value="commands">Commands</option> <!-- Gamerules and Commands will be in one type -->
+        </select>
+      </form>
+
+      <!--Add Mods here-->
+        <mod-entry
+          title="Mod"
+          desc="This is a desciption for a mod 1"
+          tags='[
+            {"image": "resources/main/Filian.png", "text": "Filian"}
+          ]'
+          website="index.html"
+          logo="resources/main/Filian.png"
+        ></mod-entry>
+
+        <mod-entry
+          title="Cat"
+          desc="This is not a desciption"
+          tags='[
+            {"image": "resources/main/Call of the Night.png", "text": "Call of the Night"}
+          ]'
+          website="https://www.youtube.com"
+          logo="resources/main/Call of the Night.png"
+        ></mod-entry>
+
+        <mod-entry
+          title="New"
+          desc="Click for new Website"
+          tags='[
+            {"image": "resources/main/Main.png", "text": "Main"}
+          ]'
+          website="mods/example_mod/wiki/r/test.html"
+          logo="resources/main/Main.png"
+        ></mod-entry>
+
+        <mod-entry
+          title="Mekanism Matter"
+          desc="Convert Energy into universal matter to convert it to anything imagable!"
+          tags='[
+            {"image": "resources/main/Filian.png", "text": "Technical"}
+          ]'
+          website="mods/mekanism_matter/wiki/absolute.html"
+          logo="resources/mod/logo.png"
+        ></mod-entry>
+    </main>
 </body>
 </html>

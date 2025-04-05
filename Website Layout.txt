@@ -1,0 +1,16 @@
+Main
+|>mod1
+  |>wiki
+  |>other
+|>mod2
+  |>wiki (only wiki Nothing else, automatic Redirect to wiki)
+|>mod3
+  |>wiki
+    |>normal pages (get started, etc) (r)
+    |>specific pages (explain item/block/etc on its own page) (r)
+
+zsemper.github.io/rand-utils/wiki/r/get-started
+zsemper.github.io/rand-utils/wiki/s/jragonium
+
+URL Layout for normal mods: zsemper.github.io/(mod)/(wiki type)/(page type)/(page)
+URL Layout for legacy mods: zsemper.github.io/legacy/(mod)/(wiki type)/(page type)/(page)
