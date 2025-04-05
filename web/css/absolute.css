@@ -44,17 +44,13 @@ main textarea::placeholder {
     color: gray;
 }
 
-main p {
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 15px;
-}
-
 main label, select {
     color:white;
     margin-bottom: 15px;
+    font-size: 20px;
+    font-family: monospace;
 }
 
-main mod-entry {
+main mod-element-list {
     margin-bottom: 20px;
 }
