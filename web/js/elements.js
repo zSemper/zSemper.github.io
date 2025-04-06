@@ -156,7 +156,7 @@ class ModElement extends HTMLElement {
                 display: block;
                 padding: 20px;
                 cursor: pointer;
-                width: fix-content;
+                width: fit-content;
             }
             .container {
                 display: flex;
