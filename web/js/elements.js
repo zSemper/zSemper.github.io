@@ -154,6 +154,7 @@ class ModElement extends HTMLElement {
         <style>
             :host {
                 display: block;
+                padding: 20px;
                 cursor: pointer;
                 width: fit-content;
             }
