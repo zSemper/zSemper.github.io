@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <title>Semper Modding</title>
-    <link rel="stylesheet" href="web/css/main.css">
+    <link rel="stylesheet" href="/web/css/mods.css">
     <script src="web/js/elements.js"></script>
     <script src="web/js/search.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="resources/main/Main.png" alt="logo">
-        <h>Website Title</h>
+      <img src="resources/main/Main.png" alt="logo">
+      <h>Website Title</h>
     </header>
     <main>
       <textarea placeholder="Search..." id="searchBar" onkeyup="searchMods()"></textarea>
@@ -34,45 +34,56 @@
       </form>
 
       <!--Add Mods here-->
-        <mod-entry
-          title="Mod"
-          desc="This is a desciption for a mod 1"
-          tags='[
-            {"image": "resources/main/Filian.png", "text": "Filian"}
-          ]'
-          website="index.html"
-          logo="resources/main/Filian.png"
-        ></mod-entry>
+      <mod-entry
+        title="Mekanism Matter"
+        desc="Convert Energy into universal matter to convert it to anything imagable!"
+        logo="resources/mod/logo.png"
+        website="mods/mekanism_matter"
+        tags='[
+          {"text": "Technical", "image": "resources/main/Ellen Joe.png"}
+        ]'
+      ></mod-entry>
 
-        <mod-entry
-          title="Cat"
-          desc="This is not a desciption"
-          tags='[
-            {"image": "resources/main/Call of the Night.png", "text": "Call of the Night"}
-          ]'
-          website="https://www.youtube.com"
-          logo="resources/main/Call of the Night.png"
-        ></mod-entry>
 
-        <mod-entry
-          title="New"
-          desc="Click for new Website"
-          tags='[
-            {"image": "resources/main/Main.png", "text": "Main"}
-          ]'
-          website="mods/example_mod/wiki/r/test.html"
-          logo="resources/main/Main.png"
-        ></mod-entry>
+      <mod-entry
+        title="Passive Generators"
+        desc="Generator that passively generates energy."
+        logo="resources/mod/passive_generators/logo.gif"
+        website=""
+        tags='[{"text": "Technical", "image": ""}]'
+      ></mod-entry>
 
-        <mod-entry
-          title="Mekanism Matter"
-          desc="Convert Energy into universal matter to convert it to anything imagable!"
-          tags='[
-            {"image": "resources/main/Filian.png", "text": "Technical"}
-          ]'
-          website="mods/mekanism_matter/wiki/index.html"
-          logo="resources/mod/logo.png"
-        ></mod-entry>
+
+      <mod-entry
+        title="Mod"
+        desc="This is a desciption for a mod 1"
+        tags='[
+          {"image": "resources/main/Filian.png", "text": "Filian"}
+        ]'
+        website="index.html"
+        logo="resources/main/Filian.png"
+      ></mod-entry>
+
+      <mod-entry
+        title="Cat"
+        desc="This is not a desciption"
+        tags='[
+          {"image": "resources/main/Call of the Night.png", "text": "Call of the Night"}
+        ]'
+        website="https://www.youtube.com"
+        logo="resources/main/Call of the Night.png"
+      ></mod-entry>
+
+      <mod-entry
+        title="New"
+        desc="Click for new Website"
+        tags='[
+          {"image": "resources/main/Main.png", "text": "Main"}
+        ]'
+        website="mods/example_mod/wiki/r/test.html"
+        logo="resources/main/Main.png"
+      ></mod-entry>
+
     </main>
-</body>
+  </body>
 </html>

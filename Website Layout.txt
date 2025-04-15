@@ -14,3 +14,23 @@ zsemper.github.io/rand-utils/wiki/s/jragonium
 
 URL Layout for normal mods: zsemper.github.io/(mod)/(wiki type)/(page type)/(page)
 URL Layout for legacy mods: zsemper.github.io/legacy/(mod)/(wiki type)/(page type)/(page)
+
+
+Main (mods)
+>mod1
+ >index.html
+ >blocks
+  >block1
+   >index.html
+  >block2
+   >index.html
+ >items
+ >fluids
+ >commands/gamerules
+ >
+
+Main (resources)
+>mod1
+ >item
+ >block
+ >logo.png
