@@ -88,6 +88,7 @@ class ModElement extends HTMLElement {
           display: block;
           cursor: pointer;
           width: 212px;
+          background-color: rgb(45, 45, 45);
         }
         .container {
           display: flex;
