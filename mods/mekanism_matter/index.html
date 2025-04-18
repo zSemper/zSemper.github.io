@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>Semper Modding</title>
-        <link rel="stylesheet" href="/web/css/modElements.css"></link>
-        <script src="/web/js/elements.js"></script>
+        <link rel="stylesheet" href="/web/css/index.css"></link>
+        <script type="module" src="/web/js/elements.js"></script>
         <script src="/web/js/search.js"></script>
     </head>
     <body>
@@ -28,85 +28,34 @@
           </select>
         </form>
 
-        <mod-element-list
-          id="block"
-          title="List 1"
-          elements='[
-            {
-                "image": "/resources/mod/mass_fabricator.png",
-                "text": "Mass Fabricator",
-                "website": "/mods/mekanism_matter/block/mass_fabricator/"
-            },
-            {
-                "image": "/resources/mod/matter_analyser.png",
-                "text": "Matter Analyser"
-            },
-            {
-                "image": "/resources/mod/replicator.png",
-                "text": "Replicator"
-            }
-          ]'
-        ></mod-element-list>
+        <mod-element-list title="List 1" id="block">
+          <mod-element title="Mass Fabricator" src="/resources/mod/mass_fabricator.png" website="/mods/mekanism_matter/block/mass_fabricator/"></mod-element>
+          <mod-element title="Matter Analyser" src="/resources/mod/matter_analyser.png"></mod-element>
+          <mod-element title="Replicator" src="/resources/mod/replicator.png"></mod-element>
+        </mod-element-list>
 
-        <mod-element-list
-        id="item"
-        title="List 2"
-        elements='[
-          {
-            "image": "/resources/mod/recycler.png",
-            "text": "Recycler"
-          },
-          {
-            "image": "/resources/mod/scanner.png",
-            "text": "Scanner"
-          },
-          {
-            "image": "/resources/mod/antimatter_synthesizer.png",
-            "text": "Antimatter Synthesizer",
-            "website": "https://www.youtube.com"
-          },
-          {
-            "image": "/resources/mod/antimatter_synthesizer.png",
-            "text": "test"
-          },
-          {
-            "image": "/resources/mod/antimatter_synthesizer.png",
-            "text": "test"
-          },
-          {
-            "image": "/resources/mod/antimatter_synthesizer.png",
-            "text": "test"
-          },
-          {
-            "image": "/resources/mod/antimatter_synthesizer.png",
-            "text": "test"
-          },
-          {
-            "image": "/resources/mod/antimatter_synthesizer.png",
-            "text": "test"
-          }
-        ]'
-        ></mod-element-list>
+        <mod-element-list title="List 2" id="item">
+          <mod-element title="Recycler" src="/resources/mod/recycler.png"></mod-element>
+          <mod-element title="Scanner" src="/resources/mod/scanner.png"></mod-element>
+          <mod-element title="Antimatter Synthesizer" src="/resources/mod/antimatter_synthesizer.png"></mod-element>
+          <mod-element title="text" src="/resources/mod/antimatter_synthesizer.png" website="https://www.youtube.com"></mod-element>
+          <mod-element title="text" src="/resources/mod/antimatter_synthesizer.png"></mod-element>
+          <mod-element title="text" src="/resources/mod/antimatter_synthesizer.png"></mod-element>
+          <mod-element title="text" src="/resources/mod/antimatter_synthesizer.png"></mod-element>
+          <mod-element title="text" src="/resources/mod/antimatter_synthesizer.png"></mod-element>
+        </mod-element-list>
 
-      <mod-element-list
-      id="fluid"
-      title="List 3"
-      elements='[
-        {
-            "image": "/resources/mod/arc_furnace.png",
-            "text": "Arc Furnace"
-        },
-        {
-            "image": "/resources/mod/reactor_port_in.png",
-            "text": "Reactor Port"
-        },
-        {
-            "image": "/resources/mod/reactor_controller.png",
-            "text": "Reactor Controller"
-        }
-      ]'
-      ></mod-element-list>
+        <mod-element-list title="List 3" id="fluid">
+          <mod-element title="Arc Furnace" src="/resources/mod/arc_furnace.png"></mod-element>
+          <mod-element title="Reactor Port" src="/resources/mod/reactor_port_in.png"></mod-element>
+          <mod-element title="Reactor Controller" src="/resources/mod/reactor_controller.png"></mod-element>
+        </mod-element-list>
 
+        <mod-element-list title="Random" id="command">
+          <mod-element title="Gamerule" src="/resources/main/gamerule.png"></mod-element>
+          <mod-element title="Config" src="/resources/main/config.png"></mod-element>
+          <mod-element title="Command" src="/resources/main/command.png"></mod-element>
+        </mod-element-list>
 
       <multiblock-viewer
         data = '[

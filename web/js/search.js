@@ -11,11 +11,13 @@ function searchMods() {
 function searchModElement() {
     const searchText = document.getElementById("searchBar").value.toLowerCase();
     document.querySelectorAll("mod-element-list").forEach(mod_element_list => {
+        const shadow = mod_element_list.shadowRoot;
+        const slot = shadow.querySelector(".grid > slot");
+        const mod_elements = slot.assignedElements();
         let anyVisible = false;
-        const mod_elements = mod_element_list.shadowRoot.querySelectorAll(".grid > mod-element");
 
         mod_elements.forEach(mod_element => {
-            const text = mod_element.getAttribute("text")?.toLocaleLowerCase() || "";
+            const text = mod_element.getAttribute("title")?.toLocaleLowerCase() || "";
             const matches = text.includes(searchText);
 
             mod_element.style.display = matches ? "block" : "none";
@@ -29,7 +31,7 @@ function searchModElement() {
 }
 
 
-// Select 
+// Select Mod Element ID
 function selectModElement() {
     const select = document.getElementById("list-selector");
     const selectedId = select.value;
@@ -41,17 +43,4 @@ function selectModElement() {
             mod_element_list.style.display = mod_element_list.id === selectedId ? "block" : "none";
         }
     });
-}
-
-
-// Collapse
-function collapse(btn) {
-    btn.classList.toggle("active");
-
-    const content = btn.nextElementSibling;
-    if (content.style.display === "block") {
-        content.style.display = "none";
-    } else {
-        content.style.display = "block";
-    }
 }

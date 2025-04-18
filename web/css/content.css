@@ -1,0 +1,35 @@
+@import url(/web/css/main.css);
+/*
+Main Mod Page
+Mod Select Page
+*/
+
+main textarea {
+    resize: none;
+    color: white;
+    font-size: 30px;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    text-shadow: "Search...";
+    margin-bottom: 10px;
+}
+
+main textarea::placeholder {
+    color: gray;
+}
+
+main p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+main label, select {
+    color:white;
+    margin-bottom: 15px;
+}
+
+main mod-entry {
+    margin-bottom: 20px;
+}

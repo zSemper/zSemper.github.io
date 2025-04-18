@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Semper Modding</title>
+        <link rel="stylesheet" href="/web/css/index.css"></link>
+        <script type="module" src="/web/js/elements.js"></script>
+        <script src="/web/js/search.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="/mods/passive_generators/">
+              <img src="/resources/mod/passive_generators/logo.gif">
+            </a>
+            <h>Passive Generators - Mod Index</h>
+        </header>
+    </body>
+    <main>
+        <textarea placeholder="Search..."  id="searchBar" onkeyup="searchModElement()"></textarea>
+
+        <form>
+          <label for="type">Select Type:</label>
+          <select id="list-selector" onchange="selectModElement()">
+            <option value="all">All</option>
+            <option value="block">Blocks</option>
+            <option value="item">Items</option>
+            <option value="gamerule">Gamerule</option>
+          </select>
+        </form>
+
+        <mod-element-list title="Blocks" id="block">
+          <mod-element title="Lapotron Solar Panel" src="/resources/mod/passive_generators/block/lapotron_solar_panel.png"></mod-element>
+          <mod-element title="Quartzite Solar Panel" src="/resources/mod/passive_generators/block/quartize_solar_panel.png"></mod-element>
+          <mod-element title="Crystalline Solar Panel" src="/resources/mod/passive_generators/block/crystalline_solar_panel.png"></mod-element>
+          <mod-element title="Generator Casing" src="/resources/mod/passive_generators/block/generator_casing.png"></mod-element>
+          <mod-element title="Water Generator" src="/resources/mod/passive_generators/block/water_generator.png"></mod-element>
+          <mod-element title="Lava Generator" src="/resources/mod/passive_generators/block/lava_generator.png"></mod-element>
+          <mod-element title="Heat Generator" src="/resources/mod/passive_generators/block/heat_generator.png"></mod-element>
+          <mod-element title="Wind Generator" src="/resources/mod/passive_generators/block/wind_generator.png"></mod-element>
+          <mod-element title="Thermo Generator Tier 1" src="/resources/mod/passive_generators/block/thermo_generator_1.png"></mod-element>
+          <mod-element title="Thermo Generator Tier 2" src="/resources/mod/passive_generators/block/thermo_generator_2.png"></mod-element>
+          <mod-element title="Lightning Generator" src="/resources/mod/passive_generators/block/lightning_generator.png"></mod-element>
+          <mod-element title="Dragon Energy Absorber" src="/resources/mod/passive_generators/block/dragon_energy_absorber.png"></mod-element>
+        </mod-element-list>
+
+        <mod-element-list title="Items" id="item">
+          <mod-element title="Steel" src="/resources/mod/passive_generators/item/steel_ingot.png"></mod-element>
+          <mod-element title="Fan" src="/resources/mod/passive_generators/item/fan_spinning.gif"></mod-element>
+        </mod-element-list>
+
+        <mod-element-list title="Gamerules" id="gamerule">
+          <mod-element title="Replace" src="/resources/main/gamerule.png"></mod-element>
+        </mod-element-list>
+    </main>
+</html>
