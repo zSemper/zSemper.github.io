@@ -156,7 +156,6 @@ class ModElementList extends HTMLElement {
         :host {
           display: block;
           padding: 20px;
-          width: 100%;
         }
         .container {
           display: flex;
