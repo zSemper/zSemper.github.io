@@ -88,7 +88,6 @@ class ModElement extends HTMLElement {
           display: block;
           cursor: pointer;
           width: 212px;
-          background-color: rgb(45, 45, 45);
         }
         .container {
           display: flex;
@@ -98,6 +97,7 @@ class ModElement extends HTMLElement {
           border-radius: 10px;
           background-color: rgb(45, 45, 45);
           padding-top: 10px;
+          height: 260px;
         }
         .container:hover {
           background-color: rgb(55, 55, 55);
