@@ -196,6 +196,7 @@ class ModElementList extends HTMLElement {
     shadow.appendChild(template.content.cloneNode(true));
     this._text = shadow.querySelector(".text");
     this._container = shadow.querySelector(".grid");
+    this._slot = shadow.querySelector("slot");
   }
 
   connectedCallback() {
@@ -207,7 +208,12 @@ class ModElementList extends HTMLElement {
   }
 
   updateGridSpacing() {
-    const modElementWidth = 212;
+    const slot = this._slot;
+    const slottedElements = slot.assignedElements({flatten: true});
+
+    if (slottedElements.length === 0) return;
+
+    const modElementWidth = slottedElements[0].getBoundingClientRect().width;
     const innerWidth = this.getBoundingClientRect().width;
 
     const modElementAmount = Math.floor(innerWidth / modElementWidth);
@@ -218,7 +224,7 @@ class ModElementList extends HTMLElement {
     }
 
     this._container.style.setProperty('--gap', `${gap}px`);
-    this._container.style.gridTemplateColumns = `repeat(${modElementAmount}, 212px)`;
+    this._container.style.gridTemplateColumns = `repeat(${modElementAmount}, ${modElementWidth}px)`;
   }
 }
 customElements.define("mod-element-list", ModElementList);
