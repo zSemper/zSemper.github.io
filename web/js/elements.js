@@ -34,6 +34,7 @@ class ModEntry extends HTMLElement {
         .content {
           display: flex;
           flex-direction: column;
+          padding-right: 10px;
         }
         .title {
           font-size: 30px;
