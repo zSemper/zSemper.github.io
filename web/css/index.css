@@ -58,7 +58,7 @@ main mod-element-list {
         height: 390px;
     }
 
-    main mod-element.image {
+    main mod-element::part(image) {
         width: 384;
         height: 384;
     }

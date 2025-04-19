@@ -47,7 +47,7 @@ class ModEntry extends HTMLElement {
       </style>
 
       <div class="container">
-        <img class="image" />
+        <img class="image" part="image"/>
         <div class="content">
           <div class="title" part="title"></div>
           <div class="description" part="description"></div>
@@ -120,7 +120,7 @@ class ModElement extends HTMLElement {
       </style>
 
       <div class="container">
-        <img class="image" />
+        <img class="image" part="image"/>
         <div class="text" part="text"></div>
       </div>
     `;

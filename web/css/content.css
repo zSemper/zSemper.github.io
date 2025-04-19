@@ -35,7 +35,7 @@ main mod-entry {
 }
 
 @media (orientation: portrait) {
-    main mod-entry.image {
+    main mod-entry::part(image) {
         width: 300px;
         height: 300px;
     }
