@@ -43,8 +43,8 @@ main mod-element-list {
     }
 
     main mod-element.image {
-        width: 288;
-        height: 288;
+        width: 384;
+        height: 384;
     }
 
     main mod-element.text {
