@@ -46,7 +46,7 @@ main label, select {
     }
 
     main mod-entry {
-        margin-bottom: 40px;
+        margin-top: 30px;
     }
 
     main mod-entry::part(image) {
