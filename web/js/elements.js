@@ -121,7 +121,7 @@ class ModElement extends HTMLElement {
 
       <div class="container">
         <img class="image" />
-        <div class="text"></div>
+        <div class="text" part="text"></div>
       </div>
     `;
     shadow.appendChild(template.content.cloneNode(true));
@@ -186,7 +186,7 @@ class ModElementList extends HTMLElement {
       </style>
 
       <div class="container">
-        <div class="text"></div>
+        <div class="text" part="text"></div>
         <div class="grid">
           <slot></slot>
         </div>

@@ -47,11 +47,11 @@ main mod-element-list {
         height: 384;
     }
 
-    main mod-element.text {
-        font-size: 2.4em;
+    main mod-element::part(text) {
+        font-size: 1.8em;
     }
 
-    main mod-element-list.text {
-        font-size: 2em;
+    main mod-element-list::part(text) {
+        font-size: 1.5em;
     }
 }
