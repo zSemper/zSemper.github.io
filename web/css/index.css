@@ -32,3 +32,26 @@ main label, select {
 main mod-element-list {
     margin-bottom: 20px;
 }
+
+@media (orientation: portrait) {
+    main mod-element {
+        width: 424px;
+    }
+
+    main mod-element.container {
+        height: 520px;
+    }
+
+    main mod-element.image {
+        width: 384px;
+        height: 384px;
+    }
+
+    main mod-element.text {
+        font-size: 2.4em;
+    }
+
+    main mod-element-list.text {
+        font-size: 2em;
+    }
+}
