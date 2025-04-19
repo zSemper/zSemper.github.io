@@ -49,8 +49,8 @@ class ModEntry extends HTMLElement {
       <div class="container">
         <img class="image" />
         <div class="content">
-          <div class="title"></div>
-          <div class="description"></div>
+          <div class="title" part="title"></div>
+          <div class="description" part="description"></div>
         </div>
       </div>
     `;

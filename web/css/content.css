@@ -33,3 +33,18 @@ main label, select {
 main mod-entry {
     margin-bottom: 20px;
 }
+
+@media (orientation: portrait) {
+    main mod-entry.image {
+        width: 300px;
+        height: 300px;
+    }
+
+    main mod-entry::part(title) {
+        font-size: 60px;
+    }
+
+    main mod-entry::part(description) {
+        font-size: 40px;
+    }
+}
