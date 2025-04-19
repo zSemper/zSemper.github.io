@@ -35,23 +35,23 @@ main mod-element-list {
 
 @media (orientation: portrait) {
     main mod-element {
-        width: 424px;
+        width: 318px;
     }
 
     main mod-element.container {
-        height: 520px;
+        height: 390px;
     }
 
     main mod-element.image {
-        width: 384px;
-        height: 384px;
+        width: 288;
+        height: 288;
     }
 
     main mod-element.text {
-        font-size: 2.4em;
+        font-size: 1.8em;
     }
 
     main mod-element-list.text {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
