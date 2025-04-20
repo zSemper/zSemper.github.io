@@ -93,11 +93,11 @@ Main Config for all CSS files
   }
 
   main update-info {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   main update-info::part(symbol) {
-    font-size: 60px;
+    font-size: 70px;
   }
 
   main update-info::part(text) {
