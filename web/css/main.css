@@ -97,7 +97,7 @@ Main Config for all CSS files
   }
 
   main update-info::part(symbol) {
-    font-size: 70px;
+    font-size: 50px;
   }
 
   main update-info::part(text) {
