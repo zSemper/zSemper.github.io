@@ -91,4 +91,12 @@ Main Config for all CSS files
     margin-right: 5%;
     padding: 20px;
   }
+
+  main update-info .symbol {
+    font-size: 50px;
+  }
+
+  main update-info .text {
+    font-size: 45px;
+  }
 }
