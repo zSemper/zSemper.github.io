@@ -92,11 +92,11 @@ Main Config for all CSS files
     padding: 20px;
   }
 
-  main update-info .symbol {
-    font-size: 50px !important;
+  main update-info::part(symbol) {
+    font-size: 50px;
   }
 
-  main update-info .text {
-    font-size: 45px !important;
+  main update-info::part(text) {
+    font-size: 45px;
   }
 }

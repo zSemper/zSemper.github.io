@@ -390,7 +390,7 @@ class InfoPanel extends HTMLElement {
       </style>
 
       <div class="container">
-        <button></button>
+        <button part="button"></button>
         <div class="content">
           <slot></slot>
         </div>
@@ -464,9 +464,9 @@ class UpdateInfo extends HTMLElement {
       </style>
       
       <div class="content">
-        <div class="symbol"></div>
-        <div class="text"></div>
-        <div class="symbol"></div>
+        <div class="symbol" part="symbol"></div>
+        <div class="text" part="text"></div>
+        <div class="symbol" part="symbol"></div>
       </div>
     `;
 
@@ -494,11 +494,11 @@ class UpdateInfo extends HTMLElement {
 
       if (minecraft_version == this.version_info.minecraft && mod_version == this.version_info.mod) {
         this._content.classList.add("hidden");
-      } else if (minecraft_version != this.version_info.minecraft && mod_version == this.version_info.mod) {
+      } else if (minecraft_version != this.version_info.minecraft && (mod_version == this.version_info.mod || mod_version == "")) {
         text = "This page is currently only updated until minecraft version " + minecraft_version;
-      } else if (minecraft_version == this.version_info.minecraft && mod_version != this.version_info.mod) {
+      } else if ((minecraft_version == this.version_info.minecraft || minecraft_version == "") && mod_version != this.version_info.mod) {
         text = "This page is currently only updated until mod version " + mod_version;    
-      } else if (minecraft_version != this.version_info.minecraft && mod_version != this.version_info.mod) {
+      } else if ((minecraft_version != this.version_info.minecraft && minecraft_version != "") && (mod_version != this.version_info.mod && mod_version != "")) {
         text = "This page is currently only updated until mod version " + mod_version + " for minecraft version " + minecraft_version; 
       }
     } else if (status == "stopped") {
