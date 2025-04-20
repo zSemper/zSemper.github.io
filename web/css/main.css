@@ -92,8 +92,12 @@ Main Config for all CSS files
     padding: 20px;
   }
 
+  main update-info {
+    margin-bottom: 10px;
+  }
+
   main update-info::part(symbol) {
-    font-size: 50px;
+    font-size: 60px;
   }
 
   main update-info::part(text) {
