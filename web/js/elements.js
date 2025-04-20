@@ -48,7 +48,7 @@ class ModEntry extends HTMLElement {
       </style>
 
       <div class="container">
-        <img class="image" part="image"/>
+        <img class="image" part="image" />
         <div class="content">
           <div class="title" part="title"></div>
           <div class="description" part="description"></div>
@@ -117,6 +117,7 @@ class ModElement extends HTMLElement {
           margin-bottom: 8px;
           text-align: center;
           color: rgb(255, 255, 255);
+
         }
       </style>
 
@@ -165,7 +166,6 @@ class ModElementList extends HTMLElement {
           gap: 10px;
           border-radius: 10px;
           background-color: rgb(45, 45, 45);
-          margin-left: var(--margin, 0px);
         }
         .grid {
           display: inline-grid;
@@ -365,10 +365,7 @@ class InfoPanel extends HTMLElement {
         .container {
           border-radius: 10px;
           background-color: rgb(45, 45, 45);
-          padding-top: 6px;
-          padding-left: 5px;
-          padding-right: 5px;
-          padding-bottom: 6px;
+          padding: 10px;
         }
         button {
           width: 100%;
@@ -379,6 +376,9 @@ class InfoPanel extends HTMLElement {
           color: white;
           border: none;
           border-radius: 5px;
+        }
+        button:hover {
+          background-color: rgb(65, 65, 65);
         }
         .content {
           display: none;

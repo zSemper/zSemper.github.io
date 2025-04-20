@@ -3,28 +3,80 @@
 Mod Guide Page
 */
 
+main .indexer {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 10px;
+    font-family: monospace;
+    margin-bottom: 20px;
+}
+
+main .indexer p {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(45, 45, 45);
+}
+
+main .indexer .section {
+    padding-left: 10px;
+    background-color: rgb(45, 45, 45);
+}
+
+main .indexer .section a {
+    font-size: 20px;
+    color:rgb(200, 200, 200);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+main .indexer .section a:hover {
+    text-decoration: underline;
+}
+
 main info-panel {
     margin-bottom: 10px;
 }
 
-main p, h1 {
+main info-panel p, h1, a, img {
     color: rgb(200, 200, 200);
     margin-top: 10px;
     background-color: rgb(45, 45, 45);
     word-wrap: break-word;
 }
 
-main p {
+main info-panel p, a {
     font-size: 20px;
 }
 
-main h1 {
+main info-panel h1 {
     font-size: 26px;
 }
 
-main img {
+main info-panel img {
     width: 25%;
     height: auto;
+}
+
+main info-panel a {
+    text-decoration: none; 
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+main info-panel a:hover {
+    text-decoration: underline;
+}
+
+main info-panel info-panel {
+    background-color: rgb(45, 45, 45);
 }
 
 main .image {

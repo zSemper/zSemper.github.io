@@ -46,6 +46,7 @@ main mod-element-list {
         font-size: 50px;
         height: 60px;
     }
+    
     main label, select {
         font-size: 40px;
     }
