@@ -93,10 +93,10 @@ Main Config for all CSS files
   }
 
   main update-info .symbol {
-    font-size: 50px;
+    font-size: 50px !important;
   }
 
   main update-info .text {
-    font-size: 45px;
+    font-size: 45px !important;
   }
 }
