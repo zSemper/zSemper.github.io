@@ -165,8 +165,8 @@ class ModElement extends HTMLElement {
             height: 390px;
           }
           .image {
-            width: 384px;
-            height: 384px;
+            width: 288px;
+            height: 288px;
           }
           .text {
             font-size: 1.8em;
