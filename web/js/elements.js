@@ -148,6 +148,10 @@ class ModElement extends HTMLElement {
           :host {
             width: 212px;
           }
+          .image {
+            width: 192px;
+            height: 192px;
+          }
           .container {
             height: 260px;
           }
@@ -158,6 +162,10 @@ class ModElement extends HTMLElement {
         @media (orientation: portrait) {
           :host {
             width: 318px;
+          }
+          .image {
+            width: 288px;
+            height: 288px;
           }
           .container {
             height: 390px;
