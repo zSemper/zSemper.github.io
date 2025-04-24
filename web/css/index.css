@@ -20,14 +20,10 @@ main textarea::placeholder {
     color: gray;
 }
 
-main label, select {
+main :is(label, select) {
     color:white;
     margin-bottom: 15px;
     font-family: monospace;
-}
-
-main mod-element-list {
-    margin-bottom: 20px;
 }
 
 @media (orientation: landscape) {
@@ -36,7 +32,7 @@ main mod-element-list {
         height: 40px;
     }
 
-    main label, select {
+    main :is(label, select) {
         font-size: 20px;
     }
 }
@@ -47,28 +43,7 @@ main mod-element-list {
         height: 60px;
     }
     
-    main label, select {
+    main :is(label, select) {
         font-size: 40px;
-    }
-
-    main mod-element {
-        width: 318px;
-    }
-
-    main mod-element.container {
-        height: 390px;
-    }
-
-    main mod-element::part(image) {
-        width: 384;
-        height: 384;
-    }
-
-    main mod-element::part(text) {
-        font-size: 1.8em;
-    }
-
-    main mod-element-list::part(text) {
-        font-size: 3em;
     }
 }

@@ -1,4 +1,4 @@
-// Search function for mod-entry with searchBar
+// Search function for entry with searchBar
 function searchMods() {
     const searchText = document.getElementById("searchBar").value.toLowerCase();
     document.querySelectorAll("mod-entry").forEach(entry => {

@@ -26,8 +26,6 @@ class ModEntry extends HTMLElement {
           background-color: rgb(55, 55, 55);
         }
         .image {
-          width: 150px;
-          height: 150px;
           object-fit: cover;
           border-radius: 10px;
         }
@@ -37,13 +35,42 @@ class ModEntry extends HTMLElement {
           padding-right: 10px;
         }
         .title {
-          font-size: 30px;
           font-family: monospace;
           color: rgb(255, 255, 255);                
         }
         .description {
-          font-size: 20px;
           color: rgb(200, 200, 200);                
+        }
+
+        @media (orientation: landscape) {
+          .container {
+            margin-bottom: 20px;
+          }
+          .image {
+            width: 150px;
+            height: 150px;
+          }
+          .title {
+            font-size: 30px;
+          }
+          .description {
+            font-size: 20px;  
+          }
+        }
+        @media (orientation: portrait) {
+          .container {
+            margin-top: 30px;
+          }
+          .image {
+            width: 300px;
+            height: 300px;
+          }
+          .title {
+            font-size: 50px;
+          }
+          .description {
+            font-size: 30px;
+          }
         }
       </style>
 
@@ -88,7 +115,6 @@ class ModElement extends HTMLElement {
         :host {
           display: block;
           cursor: pointer;
-          width: 212px;
         }
         .container {
           display: flex;
@@ -98,26 +124,53 @@ class ModElement extends HTMLElement {
           border-radius: 10px;
           background-color: rgb(45, 45, 45);
           padding-top: 10px;
-          height: 260px;
         }
         .container:hover {
           background-color: rgb(55, 55, 55);
         }
         .image {
           margin-top: 8px;
-          width: 192px;
-          height: 192px;
           object-fit: cover;
           border-radius: 10px;
         }
         .text {
-          font-size: 1.2em;
           font-family: monospace;
           margin-top: -5px;
           margin-bottom: 8px;
           text-align: center;
           color: rgb(255, 255, 255);
 
+        }
+
+        @media (orientation: landscape) {
+          :host {
+            width: 212px;
+          }
+          .container {
+            height: 260px;
+          }
+          .image {
+            width: 192px;
+            height: 192px;
+          }
+          .text {
+            font-size: 1.2em;
+          }
+        }
+        @media (orientation: portrait) {
+          :host {
+            width: 318px;
+          }
+          .container {
+            height: 390px;
+          }
+          .image {
+            width: 384px;
+            height: 384px;
+          }
+          .text {
+            font-size: 1.8em;
+          }
         }
       </style>
 
@@ -166,6 +219,7 @@ class ModElementList extends HTMLElement {
           gap: 10px;
           border-radius: 10px;
           background-color: rgb(45, 45, 45);
+          margin-bottom: 20px;
         }
         .grid {
           display: inline-grid;
@@ -178,11 +232,21 @@ class ModElementList extends HTMLElement {
           border-radius: 10px;
         }
         .text {
-          font-size: 2em;
           font-family: monospace;
           color: white;
           margin-bottom: -20px;
           margin-top: 10px;
+        }
+
+        @media (orientation: landscape) {
+          .text {
+            font-size: 2em;
+          }
+        }
+        @media (orientation: portrait) {
+          .text {
+            font-size: 3em;
+          }
         }
       </style>
 
@@ -366,11 +430,11 @@ class InfoPanel extends HTMLElement {
           border-radius: 10px;
           background-color: rgb(45, 45, 45);
           padding: 10px;
+          margin-bottom: 10px;
         }
         button {
           width: 100%;
           padding: 5px;
-          font-size: 30px;
           cursor: pointer;
           background-color: rgb(55, 55, 55);
           color: white;
@@ -387,10 +451,20 @@ class InfoPanel extends HTMLElement {
         .content.open {
           display: block;
         }
+        @media (orientation: landscape) {
+          button {
+            font-size: 30px;
+          }
+        }
+        @media (orientation: portrait) {
+          button {
+            font-size: 50px;
+          }
+        }
       </style>
 
       <div class="container">
-        <button part="button"></button>
+        <button></button>
         <div class="content">
           <slot></slot>
         </div>
@@ -424,7 +498,7 @@ class InfoPanel extends HTMLElement {
 customElements.define("info-panel", InfoPanel);
 
 
-// Update
+// Update Info
 class UpdateInfo extends HTMLElement {
   constructor() {
     super();
@@ -445,21 +519,41 @@ class UpdateInfo extends HTMLElement {
           align-items: center;
           border-radius: 8px;
           justify-content: center;
-          margin-bottom: 10px;
         }
         .text {
-          font-size: 25px;
           text-align: center;
           word-wrap: break-word;
         }
         .symbol {
-          font-size: 30px;
           padding-left: 10px;
           padding-right: 10px;
         }
         .hidden {
           display: none;
           margin-bottom: 0px;
+        }
+
+        @media (orientation: landscape) {
+          .content {
+            margin-bottom: 10px;
+          }
+          .symbol {
+            font-size: 30px;
+          }
+          .text {
+            font-size: 25px;
+          }
+        }
+        @media (orientation: portrait) {
+          .content {
+            margin-bottom: 20px;
+          }
+          .symbol {
+            font-size: 50px;
+          }
+          .text {
+            font-size: 45px;
+          }
         }
       </style>
       
@@ -529,3 +623,80 @@ class UpdateInfo extends HTMLElement {
   }
 }
 customElements.define("update-info", UpdateInfo);
+
+
+// Info Box
+class InfoBox extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({mode:"open"});
+
+    const template = document.createElement("template");
+    template.innerHTML = `
+      <style>
+        .container {
+          width: 100%;
+          padding: 10px;
+          background-color: rgb(45, 45, 45);
+          border-radius: 10px;
+          font-family: monospace;
+          margin-bottom: 20px;
+        }
+        .text {
+          color: rgb(255, 255, 255);
+          background-color: rgb(45, 45, 45);
+        }
+        .content {
+          padding-left: 10px;
+          background-color: rgb(45, 45, 45);
+        }
+        ::slotted(*) {
+          color: rgb(200, 200, 200);
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          margin-top: 10px;
+          text-decoration: none;
+        }
+        ::slotted(a:hover) {
+          text-decoration: underline;
+        }
+
+        @media (orientation: landscape) {
+          .text {
+            font-size: 30px;
+          }
+          ::slotted(*) {
+            font-size: 20px;
+          }
+        }
+
+        @media (orientation: portrait) {
+          .text {
+            font-size: 50px;
+          }
+          ::slotted(*) {
+            font-size: 40px;
+          }
+        }
+      </style>
+
+      <div class="container">
+        <div class=text></div>
+        <div class="content">
+          <slot></slot>
+        </div>
+      </div>
+    `;
+
+    shadow.appendChild(template.content.cloneNode(true));
+
+    this._text = shadow.querySelector(".text");
+  }
+
+  connectedCallback() {
+    this._text.textContent = this.getAttribute("title") || "";
+  }
+}
+customElements.define("info-box", InfoBox);

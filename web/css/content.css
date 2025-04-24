@@ -23,7 +23,7 @@ main p {
     margin-bottom: 15px;
 }
 
-main label, select {
+main :is(label, select) {
     color:white;
     margin-bottom: 15px;
 }
@@ -33,32 +33,11 @@ main label, select {
         font-size: 30px;
         height: 40px;
     }
-
-    main mod-entry {
-        margin-bottom: 20px;
-    }
 }
 
 @media (orientation: portrait) {
     main textarea {
         font-size: 50px;
         height: 60px;
-    }
-
-    main mod-entry {
-        margin-top: 30px;
-    }
-
-    main mod-entry::part(image) {
-        width: 300px;
-        height: 300px;
-    }
-
-    main mod-entry::part(title) {
-        font-size: 50px;
-    }
-
-    main mod-entry::part(description) {
-        font-size: 30px;
     }
 }
