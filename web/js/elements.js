@@ -130,6 +130,8 @@ class ModElement extends HTMLElement {
         }
         .image {
           margin-top: 8px;
+          width: 192px;
+          height: 192px;
           object-fit: cover;
           border-radius: 10px;
         }
@@ -149,10 +151,6 @@ class ModElement extends HTMLElement {
           .container {
             height: 260px;
           }
-          .image {
-            width: 192px;
-            height: 192px;
-          }
           .text {
             font-size: 1.2em;
           }
@@ -163,10 +161,6 @@ class ModElement extends HTMLElement {
           }
           .container {
             height: 390px;
-          }
-          .image {
-            width: 288px;
-            height: 288px;
           }
           .text {
             font-size: 1.8em;
