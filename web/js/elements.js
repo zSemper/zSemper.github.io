@@ -130,8 +130,6 @@ class ModElement extends HTMLElement {
         }
         .image {
           margin-top: 8px;
-          width: 192px;
-          height: 192px;
           object-fit: cover;
           border-radius: 10px;
         }
