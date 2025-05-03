@@ -75,10 +75,10 @@ class ModEntry extends HTMLElement {
       </style>
 
       <div class="container">
-        <img class="image" part="image" />
+        <img class="image">
         <div class="content">
-          <div class="title" part="title"></div>
-          <div class="description" part="description"></div>
+          <div class="title"></div>
+          <div class="description"></div>
         </div>
       </div>
     `;
@@ -175,8 +175,8 @@ class ModElement extends HTMLElement {
       </style>
 
       <div class="container">
-        <img class="image" part="image"/>
-        <div class="text" part="text"></div>
+        <img class="image">
+        <div class="text"></div>
       </div>
     `;
     shadow.appendChild(template.content.cloneNode(true));
@@ -251,7 +251,7 @@ class ModElementList extends HTMLElement {
       </style>
 
       <div class="container">
-        <div class="text" part="text"></div>
+        <div class="text"></div>
         <div class="grid">
           <slot></slot>
         </div>
@@ -558,9 +558,9 @@ class UpdateInfo extends HTMLElement {
       </style>
       
       <div class="content">
-        <div class="symbol" part="symbol"></div>
-        <div class="text" part="text"></div>
-        <div class="symbol" part="symbol"></div>
+        <div class="symbol"></div>
+        <div class="text"></div>
+        <div class="symbol"></div>
       </div>
     `;
 
@@ -683,7 +683,7 @@ class InfoBox extends HTMLElement {
       </style>
 
       <div class="container">
-        <div class=text></div>
+        <div class="text"></div>
         <div class="content">
           <slot></slot>
         </div>

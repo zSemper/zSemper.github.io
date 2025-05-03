@@ -1,0 +1,76 @@
+@import url(/web/css/main.css);
+/*
+Mod Index Page
+*/
+
+main select {
+    border-radius: 5px;
+}
+
+main textarea {
+    resize: none;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    text-shadow: "Search...";
+    margin-bottom: 10px;
+}
+
+main textarea::placeholder {
+    color: gray;
+}
+  
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: sans-serif;
+}
+
+main th {
+    font-size: 30px;
+}
+  
+main :is(th, td) {
+    color: rgb(255, 255, 255);
+    border: 2px solid  rgb(200, 200, 200);
+    text-align: center;
+    background-color: rgb(40, 40, 40);
+}
+  
+main :is(th:nth-child(1), td:nth-child(1)) {
+    width: 148px;
+    height: auto;
+    padding: 10px;
+}
+  
+main :is(th:nth-child(1), td:nth-child(1)) img {
+    width: 128px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+  
+main :is(td:nth-child(n+2)) {
+    width: calc((100% - 128px) / 2);
+    font-family: monospace;
+    font-size: 22px;
+}
+  
+
+
+
+@media (orientation: landscape) {
+    main textarea {
+        font-size: 30px;
+        height: 40px;
+    }
+}
+
+@media (orientation: portrait) {
+    main textarea {
+        font-size: 50px;
+        height: 60px;
+    }
+}

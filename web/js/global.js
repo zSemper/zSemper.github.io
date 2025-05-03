@@ -10,5 +10,9 @@ export const VERSIONS = {
     passive_generators: {
         mod: "1.0.0",
         minecraft: "1.21.1"
+    },
+    chisel_chipped_integration: {
+        mod: "1.3.7",
+        minecraft: "1.21.1"
     }
 };

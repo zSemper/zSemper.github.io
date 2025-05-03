@@ -3,61 +3,37 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
-    <title>Semper Modding</title>
-    <link rel="icon" href="/resources/main/favicon.ico" type="image/x-icon">
+    <title>Mods - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/web/css/content.css">
     <script type="module" src="/web/js/elements.js"></script>
     <script src="/web/js/search.js"></script>
   </head>
   <body>
+    <div class="taskbar">
+      <a href="/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Mods/</p>
+    </div>
     <header>
-      <img src="/resources/main/logo.png" alt="logo">
-      <h>Semper Modding - Mods</h>
+      <img src="/resources/main/logo.png">
+      <h>Mod List</h>
     </header>
     <main>
       <textarea placeholder="Search..." id="searchBar" onkeyup="searchMods()"></textarea>
 
       <!--Add Mods here-->
-      <mod-entry
-        title="Mekanism Matter"
-        desc="Convert Energy into universal matter to convert it to anything imagable!"
-        src="/resources/mod/logo.png"
-        website="mekanism_matter/"
-      ></mod-entry>
-
       <mod-entry title="Chisel" desc="Bringing back the old chisel blocks." src="/resources/mod/chisel/logo.png" website="chisel/"></mod-entry>
       <mod-entry title="Common Ore Library" desc="A collection of ores and alloys." src="/resources/mod/common_ore_library/logo.png" website="common_ore_library/"></mod-entry>
-
-
-      <mod-entry
-        title="Passive Generators"
-        desc="Generator that passively generates energy."
-        src="/resources/mod/passive_generators/logo.gif"
-        website="passive_generators/"
-      ></mod-entry>
-
-
-      <mod-entry
-        title="Mod"
-        desc="This is a desciption for a mod 1"
-        website="index.html"
-        src="/resources/main/Filian.png"
-      ></mod-entry>
-
-      <mod-entry
-        title="Cat"
-        desc="This is not a desciption"
-        website="https://www.youtube.com"
-        src="/resources/main/Call of the Night.png"
-      ></mod-entry>
-
-      <mod-entry
-        title="New"
-        desc="Click for new Website"
-        website="mods/example_mod/wiki/r/test.html"
-        src="/resources/main/Main.png"
-      ></mod-entry>
-
+      <mod-entry title="Mekanism Matter (only exists for testing)" desc="Convert Energy into universal matter to convert it ti anything imagable." src="/resources/mod/mekanism_matter/logo.png" website="mekanism_matter/"></mod-entry>
+      <mod-entry title="Passive Generators (not finished yet)" desc="Generators that passively generate energy." src="/resources/mod/passive_generators/logo.gif" website="passive_generators/"></mod-entry>
+      <mod-entry title="Prodigy Tech (not added yet)" desc="placeholder" src="/resources/mod/prodigy_tech/logo.png" website="prodigy_tech/"></mod-entry>
+      <mod-entry title="Random Utilities (not added yet)" desc="A collection of random useful blocks and items." src="/resources/main/missing_item.png" website="rand_utils/"></mod-entry>
+      <mod-entry title="Thermal Processing (not added yet)" desc="placeholder" src="/resources/main/missing_item.png" website="thermal_processing/"></mod-entry>
     </main>
   </body>
 </html>

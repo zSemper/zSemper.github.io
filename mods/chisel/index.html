@@ -4,18 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
         <title>Semper Modding</title>
-        <link rel="icon" href="/resources/main/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/web/css/content.css">
         <script type="module" src="/web/js/elements.js"></script>
       </head>
       <body>
+        <div class="taskbar">
+          <a href="/mods/">
+            <img src="/resources/main/home.png">
+          </a>
+          <a href="javascript:history.back()">
+            <img src="/resources/main/back.png">
+          </a>
+          <p>Mods/Chisel/</p>
+        </div>
         <header>
             <img src="/resources/mod/chisel/logo.png" alt="logo">
             <h>Chisel</h>
         </header>
         <main>
-            <mod-entry title="Guides" desc="How to get started type page" src="/resources/main/guide.png" website="guide/"></mod-entry>
-            <mod-entry title="Mod Index" desc="A list of all things in the mods." src="/resources/main/index.png" website="index/"></mod-entry>
+          <update-info mod="chisel_chipped_integration" status="checked" version="1.3.7" minecraft="1.21.1"></update-info>
+
+          <mod-entry title="Guides" desc="How to get started type page" src="/resources/main/guide.png" website="guide/"></mod-entry>
+          <mod-entry title="Mod Index" desc="A list of all things in the mods." src="/resources/main/index.png" website="index/"></mod-entry>
+          <mod-entry title="Coming soon" desc="An overview of what features are planned in the future." src="/resources/main/soon.png" website="soon/"></mod-entry>
         </main>
       </body>
 </html>

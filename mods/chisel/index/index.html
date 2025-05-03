@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Chisel - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/index.css"></link>
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/mods/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Mods/Chisel/Index/</p>
+    </div>
+    <header>
+      <img src="/resources/mod/chisel/logo.png" alt="logo">
+      <h>Mod Index</h>
+    </header>
+  </body>
+  <main>
+    <update-info mod="chisel_chipped_integration" status="checked" version="1.3.7" minecraft="1.21.1"></update-info>
+
+    <textarea placeholder="Search..."  id="searchBar" onkeyup="searchModElement()"></textarea>
+
+    <form>
+      <label for="type">Select Type:</label>
+      <select id="list-selector" onchange="selectModElement()">
+        <option value="all">All</option>
+        <option value="item">Items</option>
+        <option value="blockCustom">Custom Blocks</option>
+        <option value="blockVanilla">Vanilla Blocks</option>
+      </select>
+    </form>
+
+    <mod-element-list title="Items" id="item">
+      <mod-element title="Ender Offset Wand (Coming Soon)" src="/resources/mod/chisel/item/ender_offset_wand.png"></mod-element>
+    </mod-element-list>
+
+    <mod-element-list title="Custom Blocks" id="blockCustom">
+      <mod-element title="Factory Blocks" src="/resources/mod/chisel/block/factory_block.png" website="block/factory/"></mod-element>
+      <mod-element title="Futura Blocks" src="/resources/mod/chisel/block/futura_block.gif" website="block/futura/"></mod-element>
+      <mod-element title="Laboratory Blocks" src="/resources/mod/chisel/block/laboratory_block.png" website="block/laboratory/"></mod-element>
+      <mod-element title="Metal Blocks (Coming Soon)" src="/resources/mod/chisel/block/metal_block.png"></mod-element>
+      <mod-element title="Technical Blocks" src="/resources/mod/chisel/block/technical_block.png" website="block/technical/"></mod-element>
+      <mod-element title="Tyrian" src="/resources/mod/chisel/block/tyrian.png" website="block/tyrian/"></mod-element>
+    </mod-element-list>
+
+    <mod-element-list title="Vanilla Blocks" id="blockVanilla">
+      <mod-element title="Carpet/Wools" src="/resources/main/missing_block.png" website="block/wool/"></mod-element>
+      <mod-element title="Diamond Blocks" src="/resources/mod/chisel/block/diamond_block.png" website="block/diamond/"></mod-element>
+      <mod-element title="Emerald Blcoks" src="/resources/mod/chisel/block/emerald_block.png" website="block/emerald/"></mod-element>
+      <mod-element title="Lapis Lazuli Blocks" src="/resources/mod/chisel/block/lapis_block.png" website="block/lapis/"></mod-element>
+      <mod-element title="Redstone Blocks" src="/resources/mod/chisel/block/redstone_block.png" website="block/redstone/"></mod-element>
+    </mod-element-list>
+  </main>
+</html>
