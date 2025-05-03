@@ -26,10 +26,6 @@ main table {
     table-layout: fixed;
     font-family: sans-serif;
 }
-
-main th {
-    font-size: 30px;
-}
   
 main :is(th, td) {
     color: rgb(255, 255, 255);
@@ -38,33 +34,41 @@ main :is(th, td) {
     background-color: rgb(40, 40, 40);
 }
   
-main :is(th:nth-child(1), td:nth-child(1)) {
-    width: 148px;
-    height: auto;
-    padding: 10px;
-}
-  
 main :is(th:nth-child(1), td:nth-child(1)) img {
-    width: 128px;
-    height: auto;
     object-fit: cover;
     display: block;
     border-radius: 8px;
 }
   
 main :is(td:nth-child(n+2)) {
-    width: calc((100% - 128px) / 2);
     font-family: monospace;
-    font-size: 22px;
 }
   
-
-
 
 @media (orientation: landscape) {
     main textarea {
         font-size: 30px;
         height: 40px;
+    }
+
+    main th {
+        font-size: 30px;
+    }
+
+    main :is(th:nth-child(1), td:nth-child(1)) {
+        width: 148px;
+        height: auto;
+        padding: 10px;
+    }
+
+    main :is(th:nth-child(1), td:nth-child(1)) img {
+        width: 128px;
+        height: auto;
+    }
+
+    main :is(td:nth-child(n+2)) {
+        width: calc((100% - 148px) / 2);
+        font-size: 22px;
     }
 }
 
@@ -72,5 +76,25 @@ main :is(td:nth-child(n+2)) {
     main textarea {
         font-size: 50px;
         height: 60px;
+    }
+
+    main th {
+        font-size: 50px;
+    }
+
+    main :is(th:nth-child(1), td:nth-child(1)) {
+        width: 296px;
+        height: auto;
+        padding: 20px;
+    }
+
+    main :is(th:nth-child(1), td:nth-child(1)) img {
+        width: 256px;
+        height: auto;
+    }
+
+    main :is(td:nth-child(n+2)) {
+        width: calc((100% - 296px) / 2);
+        font-size: 42px;
     }
 }

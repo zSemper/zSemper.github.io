@@ -11,16 +11,13 @@ body .taskbar a {
 }
 
 body .taskbar img {
-  width: 25px;
   background-color: rgb(45, 45, 45);
   color: rgb(255, 255, 255);
 }
 
 body .taskbar p {
-  width: calc(100% - 50px);
   background-color: rgb(45, 45, 45);
   color: rgb(255, 255, 255);
-  font-size: 20px;
   font-family: monospace;
 }
 
@@ -48,6 +45,15 @@ body .taskbar p {
   
   body::-webkit-scrollbar-thumb:hover {
     background-color: rgb(55, 55, 55);
+  }
+
+  body .taskbar img {
+    width: 25px;
+  }
+
+  body .taskbar p {
+    width: calc(100% - 50px);
+    font-size: 20px;
   }
 
   header {
@@ -86,6 +92,15 @@ body .taskbar p {
     box-sizing: border-box;
     background-color: rgb(20, 20, 20);
   }
+
+  body .taskbar img {
+    width: 50px;
+  }
+
+  body .taskbar p {
+    width: calc(100% - 100px);
+    font-size: 40px;
+  }  
 
   header {
     display: flex;
