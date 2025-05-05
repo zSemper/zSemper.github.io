@@ -48,12 +48,14 @@ body .taskbar p {
   }
 
   body .taskbar img {
-    width: 25px;
+    width: 35px;
+    padding: 5px;
   }
 
   body .taskbar p {
-    width: calc(100% - 50px);
+    width: calc(100% - 70px);
     font-size: 20px;
+    padding: 5px;
   }
 
   header {
@@ -94,12 +96,14 @@ body .taskbar p {
   }
 
   body .taskbar img {
-    width: 50px;
+    width: 60px;
+    padding: 5px;
   }
 
   body .taskbar p {
-    width: calc(100% - 100px);
+    width: calc(100% - 120px);
     font-size: 40px;
+    padding: 5px;
   }  
 
   header {
