@@ -29,7 +29,7 @@ pre {
     margin-bottom: 10px;
     color: white;
     background-color:rgb(45, 45, 45);
-    font-family: 'Consolas';
+    font-family: 'Consolas', 'monospace';
     overflow-x: auto;
 }
 
