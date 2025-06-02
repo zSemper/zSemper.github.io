@@ -634,12 +634,15 @@ class InfoBox extends HTMLElement {
     const template = document.createElement("template");
     template.innerHTML = `
       <style>
-        .container {
+        :host {
+          display: block;
+          font-family: monospace;
           width: 100%;
+        }
+        .container {
           padding: 10px;
           background-color: rgb(45, 45, 45);
           border-radius: 10px;
-          font-family: monospace;
           margin-bottom: 20px;
         }
         .text {
@@ -654,7 +657,7 @@ class InfoBox extends HTMLElement {
           color: rgb(200, 200, 200);
           width: 100%;
           height: auto;
-          display: flex;
+          display: block;
           flex-direction: column;
           margin-top: 10px;
           text-decoration: none;
