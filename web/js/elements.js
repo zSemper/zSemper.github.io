@@ -655,7 +655,6 @@ class InfoBox extends HTMLElement {
         }
         ::slotted(*) {
           color: rgb(200, 200, 200);
-          width: 100%;
           height: auto;
           display: block;
           flex-direction: column;
