@@ -17,34 +17,34 @@
       <a href="javascript:history.back()">
         <img src="/resources/main/back.png">
       </a>
-      <p>Plugins/Fluid Control/Get Fluid From Block</p>
+      <p>Plugins/Fluid Control/Get Amount of Fluid in Tank</p>
     </div>
     <header>
       <img src="/resources/plugin/fluid_control/logo.png">
-      <h>Get Fluid From Block</h>
+      <h>Get Amount of Fluid in Tank</h>
     </header>
     <main>
       <div class="procedure">
-        <img src="/resources/plugin/fluid_control/procedures/fluidhandler_getFluidFromBlock.png"> 
+        <img src="/resources/plugin/fluid_control/procedures/fluidhandler_getAmountInTank.png"> 
       </div>
       
       <info-box title="Generell">
-        <div class="values">Gets the Fluid inside the tank of a block at a position at X Y Z.</div>
+        <div class="values">Gets the Amount of the Fluid in Millibucket(mB) stored in the Tank a Block at a position at X Y Z.</div>
       </info-box>
 
       <info-box title="Code">
 <pre>
 <span class="java">new</span> <span class="method">Object</span><span class="vsc1">() {</span>
-    <span class="key">public</span> <span class="type">FluidStack</span> <span class="method">getFluidInTank</span><span class="vsc2">(</span><span class="type">LevelAccessor</span> <span class="var">level</span>, <span class="type">BlocksPos</span> <span class="var">pos</span><span class="vsc2">) {</span>
+    <span class="key">public</span> <span class="type">int</span> <span class="method">getAmountInTank</span><span class="vsc2">(</span><span class="type">LevelAccessor</span> <span class="var">level</span>, <span class="type">BlocksPos</span> <span class="var">pos</span><span class="vsc2">) {</span>
         <span class="java">if</span> <span class="vsc3">(</span><span class="var">level</span> <span class="key">instanceof</span> <span class="type">ILevelExtension</span> <span class="var">_ext</span><span class="vsc3">) {</span>
             <span class="type">IFluidHandler</span> <span class="var">_fluidhandler</span> = <span class="var">_ext</span>.<span class="method">getCapability</span><span class="vsc1">(</span><span class="var">Capabilities</span>.<span class="var">FluidHandler</span>.<span class="var">BLOCK</span>, <span class="var">pos</span>, <span class="key">null</span><span class="vsc1">)</span>;
             <span class="java">if</span> <span class="vsc1">(</span><span class="var">_fluidhandler</span> != <span class="key">null</span><span class="vsc1">) {</span>
-                <span class="java">return</span> <span class="var">_fluidhandler</span>.<span class="method">getFluidInTank</span><span class="vsc2">(</span><span class="code">0</span><span class="vsc2">)</span>;
+                <span class="java">return</span> <span class="var">_fluidhandler</span>.<span class="method">getFluidInTank</span><span class="vsc2">(</span><span class="code">0</span><span class="vsc2">)</span>.<span class="method">getAmount</span><span class="vsc2">()</span>;
             <span class="vsc1">}</span>
         <span class="vsc3">}</span>
-        <span class="java">return</span> <span class="var">FluidStack.EMPTY</span>;
+        <span class="java">return</span> <span class="code">0</span>;
     <span class="vsc2">}</span>
-<span class="vsc1">}</span>.<span class="method">getFluidInTank</span><span class="vsc1">(</span><span class="var">world</span>, <span class="var">BlockPos</span>.<span class="method">containing</span><span class="vsc2">(</span><span class="code">${input$x}</span>,<span class="code">${input$y}</span>,<span class="code">${input$z}</span><span class="vsc2">)</span><span class="vsc1">)</span>
+<span class="vsc1">}</span>.<span class="method">getAmountInTank</span><span class="vsc1">(</span><span class="var">world</span>, <span class="var">BlockPos</span>.<span class="method">containing</span><span class="vsc2">(</span><span class="code">${input$x}</span>,<span class="code">${input$y}</span>,<span class="code">${input$z}</span><span class="vsc2">)</span><span class="vsc1">)</span>
 </pre>
       </info-box>
 
@@ -52,7 +52,7 @@
         <div class="values"><span class="code">${input$x}</span> = X-Position of the Block</div>
         <div class="values"><span class="code">${input$y}</span> = Y-Position of the Block</div>
         <div class="values"><span class="code">${input$z}</span> = Z-Position of the Block</div>
-        <div class="values">Return <span class="code">FluidStack</span></div>        
+        <div class="values">Return <span class="code">Number</span></div>        
       </info-box>
     </main>
   </body>

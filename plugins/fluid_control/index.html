@@ -5,7 +5,7 @@
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <title>Fluid Control - Semper Modding</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/web/css/content.css">
+    <link rel="stylesheet" href="/web/css/guide.css">
     <script type="module" src="/web/js/elements.js"></script>
     <script src="/web/js/search.js"></script>
   </head>
@@ -24,14 +24,37 @@
       <h>Fluid Control</h>
     </header>
     <main>
-      <info-box title="Fluid Tanks">
-        <a href="procedures/fluidhandler_getFluidFromBlock/">Get Fluid From Block</a>
-        <a href="#mods">2. Compatibility with other mods</a>
-        <a href="#ores">3. Overview for Ores</a>
-        <a href="#alloys">4. Overview for Alloys</a>
-        <a href="#vanilla">5. Vanilla Addition</a>
-      </info-box>
-
+<!--
+      <info-panel title="Fluids">
+        <a href="">Get Fluid</a>
+        <a href="">Empty FluidStack</a>
+        <a href="">Is Fluid Empty</a>
+        <a href="">Get Fluid From Registry Name</a>
+        <a href="">Get Registry Name of Fluid</a>
+        <a href="">Get Display Name of Fluid</a>
+        <a href="">Get Fluid From Bucket</a>
+        <a href="">Get Bucket of Fluid</a>
+        <a href="">Get Amount of Fluid</a>
+        <a href="">Set Amount of Fluid</a>
+        <a href="">Add Amount to Fluid</a>
+        <a href="">Remove Amount from Fluid</a>
+      </info-panel>
+-->
+      <info-panel title="Fluid Tanks">
+        <a href="procedures/fluidhandler_getFluidFromBlock/">Get Fluid from Block</a>
+        <a href="procedures/fluidhandler_getAmountInTank">Get Amount of Fluid in Tank</a>
+        <a href="procedures/fluidhandler_getTankSize">Get Size of Tank</a>
+        <a href="procedures/fluidhandler_isFluidValid">Can Fluid be inserted into Tank of Block</a>
+        <a href="procedures/fluidhandler_drainTank">Drain Tank of Block</a>
+        <a href="procedures/fluidhandler_drainFluidInTank">Drain Fluid in Tank of Block</a>
+        <a href="procedures/fluidhandler_fillTank">Fill Tank of Block</a>
+        <a href="procedures/fluidutil_interactWithFluidHandler">Can Item in Hand interact with Tank of Block</a>
+      </info-panel>
+<!--
+      <info-panel title="Fluid Types">
+        <p>Nothing here yet!</p>
+      </info-panel>
+-->
     </main>
   </body>
 </html>
