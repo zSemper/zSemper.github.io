@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Get Fluid From Block - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/procedure.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/Fluid Control/Can Item in Hand interact with Tank</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/fluid_control/logo.png">
+      <h>Can Item in Hand interact with Tank</h>
+    </header>
+    <main>
+      <info-box title="Procedure">
+        <div class="procedure">
+          <img src="/resources/plugin/fluid_control/fluid_tanks/can_item_in_hand_interact_with_tank.png">
+        </div>
+      </info-box>
+      
+      <info-box title="Generell">
+        <div class="values">Handles the interaction the right-clicking with a fluid item (like a bucket) onto a block at a position at X Y Z.</div>
+        <br>
+        <div class="values">The Code first tries to insert the content of the fluid item into the tank, if this fails the code will try to take an, to the fluid item specific, amount of fluid from the tank and put it into the fluid item.</div>
+        <br>
+        <div class="values">Example: Right-clicking with a water bucket onto a block with a fluid tank, the bucket will be emptied and the water will be put into the tank. When right-clicking again, the bucket gets filled with water again and the tank of the block loses 1000mB of water.</div>
+        <br>
+        <div class="values">Note: This does not work with bucket created by MCreator, since MCreator handles fluid differently. Items that have an MCreator fluid stored will work when right-clicking.</div>
+      </info-box>
+
+      <info-box title="Code">
+<pre>
+<span class="java">new</span> <span class="method">Object</span><span class="vsc1">() {</span>
+    <span class="key">public</span> <span class="type">boolean</span> <span class="method">interactFluidHandler</span><span class="vsc2">(</span><span class="type">LevelAccessor</span> <span class="var">level</span>, <span class="type">Entity</span> <span class="var">entity</span>, <span class="type">BlocksPos</span> <span class="var">pos</span>, <span class="type">InteractionHand</span> <span class="var">hand</span><span class="vsc2">) {</span>
+        <span class="java">if</span> <span class="vsc3">(</span><span class="var">entity</span> <span class="key">instanceof</span> <span class="type">Player</span> <span class="var">player</span><span class="vsc3">) {</span>
+            <span class="java">if</span> <span class="vsc1">(</span><span class="var">level</span> <span class="key">instanceof</span> <span class="type">ILevelExtension</span> <span class="var">_ext</span><span class="vsc1">) {</span>
+                <span class="type">IFluidHandler</span> <span class="var">_fluidhandler</span> = <span class="var">_ext</span>.<span class="method">getCapability</span><span class="vsc2">(</span><span class="var">Capabilities</span>.<span class="var">FluidHandler</span>.<span class="var">BLOCK</span>, <span class="var">pos</span>, <span class="key">null</span><span class="vsc2">)</span>;
+                <span class="java">if</span> <span class="vsc2">(</span><span class="var">_fluidhandler</span> != <span class="key">null</span><span class="vsc2">) {</span>
+                    <span class="java">return</span> <span class="type">FluidUtil</span>.<span class="method">interactWithFluidHandler</span><span class="vsc3">(</span><span class="var">player</span>, <span class="var">hand</span>, <span class="var">_fluidhandler</span><span class="vsc3">)</span>;
+                <span class="vsc2">}</span>
+                <span class="java">return</span> <span class="key">false</span>;
+            <span class="vsc1">}</span>
+            <span class="java">return</span> <span class="key">false</span>;
+        <span class="vsc3">}</span>
+        <span class="java">return</span> <span class="key">false</span>;
+    <span class="vsc2">}</span>
+<span class="vsc1">}</span>.<span class="method">interactFluidHandler</span><span class="vsc1">(</span><span class="var">world</span>, <span class="code">${input$entity}</span>, <span class="var">BlockPos</span>.<span class="method">containing</span><span class="vsc2">(</span><span class="code">${input$x}</span>,<span class="code">${input$y}</span>,<span class="code">${input$z}</span><span class="vsc2">)</span>, <span class="type">InteractionHand</span>.<span class="code">${field$hand}</span><span class="vsc1">)</span>
+</pre>
+      </info-box>
+
+      <info-box title="Values">
+        <div class="values"><span class="code">${input$x}</span> = X-Position of the Block</div>
+        <div class="values"><span class="code">${input$y}</span> = Y-Position of the Block</div>
+        <div class="values"><span class="code">${input$z}</span> = Z-Position of the Block</div>
+        <div class="values"><span class="code">${input$entity}</span> = The Player right-clicking on a block</div>
+        <div class="values"><span class="code">${field$hand}</span> = Which Hand to check when right-clicked (MAIN_HAND, OFF_HAND)</div>
+        <div class="values">Return <span class="code">Boolean</span></div>        
+      </info-box>
+
+      <info-box title="Usage in MCreator">
+        <div class="procedure">
+          <img src="/resources/plugin/fluid_control/fluid_tanks/can_item_in_hand_interact_with_tank_example.png">
+        </div>
+      </info-box>
+    </main>
+  </body>
+</html>

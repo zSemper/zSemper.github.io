@@ -5,8 +5,28 @@
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
     <title>Semper Modding</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/content.css">
+    <script type="module" src="/web/js/elements.js"></script>
   </head>
   <body>
-    <h2>404: Page not found!</h2>
+    <div class="taskbar">
+      <a href="/">
+        <img src="resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>404: Page not found!</p>
+    </div>
+    <header>
+      <img src="resources/main/logo.png">
+      <h>Semper Modding</h>
+    </header>
+    <main>
+      <info-box title="404: Page not found!">
+        <p style="color: rgb(200, 200, 200);">It looks like you were trying to access a site that does not exist. Click below to return back to the main Page.</p>
+      </info-box>
+      <mod-entry title="Home" desc="Home Page" src="/resources/main/logo.png" website="/"></mod-entry>
+    </main>
   </body>
 </html>
