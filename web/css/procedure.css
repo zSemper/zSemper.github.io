@@ -79,6 +79,10 @@ info-box .values {
         margin-bottom: 20px;
     }
 
+    .procedure img {
+        transform: scale(2);
+    }
+
     pre {
         font-size: 40px;
         padding: 20px;
