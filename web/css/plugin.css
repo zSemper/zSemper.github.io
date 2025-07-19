@@ -1,0 +1,70 @@
+@import url(/web/css/main.css);
+/*
+Plugins
+*/
+
+main info-panel :is(p, h1, a, img) {
+    color: rgb(200, 200, 200);
+    margin-top: 10px;
+    background-color: rgb(45, 45, 45);
+    word-wrap: break-word;
+}
+
+main info-panel :is(p, a) {
+    font-size: 20px;
+}
+
+main info-panel a {
+    text-decoration: none; 
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+main info-panel a:hover {
+    text-decoration: underline;
+}
+
+main info-panel h1 {
+    font-size: 26px;
+}
+
+main info-panel img {
+    width: auto;
+    height: 100%;
+}
+
+main info-panel info-panel {
+    background-color: rgb(45, 45, 45);
+}
+
+main .image {
+    display: flex;
+    color: rgb(200, 200, 200);
+    margin-top: 10px;
+    background-color: rgb(45, 45, 45);
+    word-wrap: break-word;
+}
+
+main .image img {
+    width: 20%;
+    height: auto;
+    background-color: rgb(45, 45, 45);
+    border-radius: 8px;
+    padding-bottom: 5px;
+    margin-left: calc(3% - 5px);
+    margin-right: calc(3% - 5px);
+}
+
+main .image p {
+    width: 77%;
+}
+
+@media (orientation: portrait) {
+    
+    main info-panel :is(p, a) {
+        font-size: 40px;
+    }
+}
