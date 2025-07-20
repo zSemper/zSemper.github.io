@@ -33,7 +33,6 @@ main info-panel h1 {
 
 main info-panel img {
     width: auto;
-    height: 100%;
 }
 
 main info-panel info-panel {
@@ -62,9 +61,18 @@ main .image p {
     width: 77%;
 }
 
+@media (orientation: landscape) {
+    main info-panel img {
+        height: 100%;
+    }
+}
+
 @media (orientation: portrait) {
-    
     main info-panel :is(p, a) {
-        font-size: 40px;
+        font-size: 30px;
+    }
+
+    main info-panel img {
+        height: 200%;
     }
 }
