@@ -1,0 +1,10 @@
+{
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/thermal-processing",
+    "promos": {
+        "1.20.1-latest": "2.0.4-1.20.1",
+        "1.20.1-recommended": "2.0.4-1.20.1"
+    },
+    "1.20.1": {
+        "2.0.2-1.20.1": "Update available at https://www.curseforge.com/minecraft/mc-mods/thermal-processing/files/6164842"
+    }
+}
