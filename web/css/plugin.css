@@ -10,20 +10,27 @@ main info-panel :is(p, h1, a, img) {
     word-wrap: break-word;
 }
 
-main info-panel :is(p, a) {
-    font-size: 20px;
+main ul {
+    background-color: rgb(45, 45, 45);
+    margin-left: 5px;
 }
 
-main info-panel a {
+main info-box ul li {
+    background-color: rgb(45, 45, 45);
+    margin-left: 10px;
+    list-style-type: square;
+}
+
+main info-box ul li a {
     text-decoration: none; 
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    color: rgb(200, 200, 200);
 }
 
-main info-panel a:hover {
+main info-box ul li a:hover {
     text-decoration: underline;
 }
 
@@ -39,29 +46,15 @@ main info-panel info-panel {
     background-color: rgb(45, 45, 45);
 }
 
-main .image {
-    display: flex;
-    color: rgb(200, 200, 200);
-    margin-top: 10px;
-    background-color: rgb(45, 45, 45);
-    word-wrap: break-word;
-}
-
-main .image img {
-    width: 20%;
-    height: auto;
-    background-color: rgb(45, 45, 45);
-    border-radius: 8px;
-    padding-bottom: 5px;
-    margin-left: calc(3% - 5px);
-    margin-right: calc(3% - 5px);
-}
-
 main .image p {
     width: 77%;
 }
 
 @media (orientation: landscape) {
+    main info-panel :is(p, a) {
+        font-size: 20px;
+    }
+
     main info-panel img {
         height: 100%;
     }
@@ -73,6 +66,6 @@ main .image p {
     }
 
     main info-panel img {
-        height: 200%;
+        height: 400%;
     }
 }

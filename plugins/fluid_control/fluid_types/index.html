@@ -25,18 +25,20 @@
     </header>
     <main>
       <info-box title="Index">
-        <a href="#canConvertToSource">- Can [Fluid] create an infinite source</a>
-        <a href="#canDrownIn">- Can [Entity] drown in [Fluid]</a>
-        <a href="#canExtinguish">- Can [Entity] be extinguished by [Fluid]</a>
-        <a href="#canHydrate">- Can [Entity] by hydrated in [Fluid]</a>
-        <a href="#canPushEntity">- Can [Fluid] push [Entity]</a>
-        <a href="#canSwin">- Can [Entity] swim in [Fluid]</a>
-        <a href="#getDensity">- Get Density of [Fluid]</a>
-        <a href="#getFallDistanceModifier">- Get Fall Distance Modifier of [Entity] if [Fluid]</a>
-        <a href="#getLightLevel">- Get Light Level of [Fluid]</a>
-        <a href="#getMotionScale">- Get Motion Scale of [Entity] in [Fluid]</a>
-        <a href="#getTemperature">- Get Temperature of [Fluid]</a>
-        <a href="#getViscosity">- Get Viscosity of [Fluid]</a>
+        <ul>
+          <li><a href="#canConvertToSource">Can [Fluid] create an infinite source</a></li>
+          <li><a href="#canDrownIn">Can [Entity] drown in [Fluid]</a></li>
+          <li><a href="#canExtinguish">Can [Entity] be extinguished by [Fluid]</a></li>
+          <li><a href="#canHydrate">Can [Entity] by hydrated in [Fluid]</a></li>
+          <li><a href="#canPushEntity">Can [Fluid] push [Entity]</a></li>
+          <li><a href="#canSwin">Can [Entity] swim in [Fluid]</a></li>
+          <li><a href="#getDensity">Get Density of [Fluid]</a></li>
+          <li><a href="#getFallDistanceModifier">Get Fall Distance Modifier of [Entity] if [Fluid]</a></li>
+          <li><a href="#getLightLevel">Get Light Level of [Fluid]</a></li>
+          <li><a href="#getMotionScale">Get Motion Scale of [Entity] in [Fluid]</a></li>
+          <li><a href="#getTemperature">Get Temperature of [Fluid]</a></li>
+          <li><a href="#getViscosity">Get Viscosity of [Fluid]</a></li>
+        </ul> 
       </info-box>
 
       <section id="canConvertToSource"></section>
@@ -54,11 +56,11 @@
 
       <section id="canDrownIn"></section>
       <info-panel title="Can [Entity] drown in [Fluid]">
-        <p>Used to check, if an entity can drown in the fluid.</p>
+        <p>Used to check, if a living entity can drown in the fluid.</p>
         <img src="/resources/plugin/fluid_control/fluid_type/canDrownIn.png" />
         <p>
           Params:<br>
-          - Entity: the entity that is checked<br>
+          - Entity: the living entity that is checked<br>
           - Fluid: the fluid that the entity is checked to drown in<br>
           Return:<br>
           - true, if the entity can drown in the fluid<br>
