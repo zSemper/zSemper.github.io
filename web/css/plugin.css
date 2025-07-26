@@ -40,6 +40,7 @@ main info-panel h1 {
 
 main info-panel img {
     width: auto;
+    height: 100%;
 }
 
 main info-panel info-panel {
@@ -54,10 +55,6 @@ main .image p {
     main info-panel :is(p, a) {
         font-size: 20px;
     }
-
-    main info-panel img {
-        height: 100%;
-    }
 }
 
 @media (orientation: portrait) {
@@ -66,6 +63,6 @@ main .image p {
     }
 
     main info-panel img {
-        height: 400%;
+        transform: scaleY(4);
     }
 }
