@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>JEI Integration - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/plugin.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/JEI Integration/Procedures/Utils/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/jei_integration/logo.png">
+      <h>Utils</h>
+    </header>
+    <main>
+      <info-box title="Index">
+        <ul>
+          <li><a href="#getRecipeOutputAmount">Get the [Output Type] output [Output Name] amount of the recipe type [Recipe] with the ingredients:</a></li>
+          <li><a href="#isRecipeValid">Does the recipe type [Recipe] have a result from the ingredients:</a></li>
+          <li><a href="#getItemFromSlot">Get item in Slot [Slot] of block at x: [X] y: [Y] z: [Z]</a></li>
+          <li><a href="#getFluidFromTank">Get fluid in Tank [Tank] of block at x: [X] y: [Y] z: [Z]</a></li>
+          <li><a href="#setItemWithAmount">Set item [Item] with amount in slot [Slot] at x: [X] y: [Y] z: [Z] adjusting existing amount</a></li>
+          <li><a href="#setFluidWithAmount">Set fluid [Fluid] with amount in tank [Tank] at x: [X] y: [Y] z: [Z] adjusting existing amount</a></li>
+        </ul>
+      </info-box>
+
+      <section id="getRecipeOutputAmount"></section>
+      <info-panel title="Get the [Output Type] output [Output Name] amount of the recipe type [Recipe] with the ingredients:">
+        <p>Used to get the amount of the output from the ingredients and the recipe type</p>
+        <img src="/resources/plugin/jei_integration/procedures/utils/getRecipeOutputAmount.png">
+        <p>
+            Params:<br>
+            - Output Type: the type of the output, either an item or a fluid<br>
+            - Output Name: the name of the output<br>
+            - Recipe: the recipe type<br>
+            - Type: the type of the ingredient<br>
+            - Name: the unique name set in the recipe type<br>
+            - Consume: if true, it will consume the input if the recipe has an output<br>
+            Return:<br>
+            - the amount of the result from the recipe with the given ingredients<br>
+        </p>
+      </info-panel>
+
+      <section id="isRecipeValid"></section>
+      <info-panel title="Does the recipe type [Recipe] have a result from the ingredients:">
+        <p>Used to check if a recipe with the given ingredients is valid</p>
+        <img src="/resources/plugin/jei_integration/procedures/utils/isRecipeValid.png">
+        <p>
+            Params:<br>
+            - Recipe: the recipe type<br>
+            - Type: the type of the ingredient, either an item or a fluid<br>
+            - Name: the unique name set in the recipe type<br>
+            - Consume: if true, it will consume the input if the recipe has an output<br>
+            Return:<br>
+            - true, if the recipe with the given ingredients has an output<br>
+            - false, if the recipe has no output<br>
+        </p>
+      </info-panel>
+
+      <section id="getItemFromSlot"></section>
+      <info-panel title="Get item in Slot [Slot] of block at x: [X] y: [Y] z: [Z]">
+        <p>Gets the item from the slot of the block at a specific position</p>
+        <img src="/resources/plugin/jei_integration/procedures/utils/getItemFromSlot.png" />
+        <p>
+            Params:<br>
+            - Slot: the id of the slot<br>
+            - X: the x coord of the block<br>
+            - Y: the y coord of the block<br>
+            - Z: the z coord of the block<br>
+            Return:<br>
+            - the itemstack in the slot, not a copy of the itemstack<br>
+        </p>
+      </info-panel>
+
+      <section id="getFluidFromTank"></section>
+      <info-panel title="Get fluid in Tank [Tank] of block at x: [X] y: [Y] z: [Z]">
+        <p>Gets the fluid from the tank of the block at a specific position</p>
+        <img src="/resources/plugin/jei_integration/procedures/utils/getFluidFromTank.png">
+        <p>
+            Params:<br>
+            - Tank: the id of the tank<br>
+            - X: the x coord of the block<br>
+            - Y: the y coord of the block<br>
+            - Z: the z coord of the block<br>
+            Return:<br>
+            - the fluidstack in the tank, not a copy of the fluidstack<br>
+        </p>
+      </info-panel>
+
+      <section id="setItemWithAmount"></section>
+      <info-panel title="Set item [Item] with amount in slot [Slot] at x: [X] y: [Y] z: [Z] while accounting for the existing amount">
+        <p>Sets the item in a slot of a block, while respecting the amount of the item in the slot</p>
+        <img src="/resources/plugin/jei_integration/procedures/utils/setItemWithAmount.png">
+        <p>
+            Params:<br>
+            - Item: the itemstack that will be set in the slot<br>
+            - Slot: the id of the slot<br>
+            - X: the x coord of the block<br>
+            - Y: the y coord of the block<br>
+            - Z: the z coord of the block<br>    
+        </p>
+      </info-panel>
+
+      <section id="setFluidWithAmount"></section>
+      <info-panel title="Set fluid [Fluid] with amount in tank [Tank] at x: [X] y: [Y] z: [Z] adjusting existing amount">
+        <p>Sets the fluid in a tank of a block, while respecting the amount of the fluid in the tank</p>
+        <img src="/resources/plugin/jei_integration/procedures/utils/setFluidWithAmount.png">
+        <p>
+            Params:<br>
+            - Fluid: the fluidstack that will be set in the tank<br>
+            - Tank: the id of the tank<br>
+            - X: the x coord of the block<br>
+            - Y: the y coord of the block<br>
+            - Z: the z coord of the block<br>    
+        </p>
+      </info-panel>
+    </main>
+  </body>
+</html>

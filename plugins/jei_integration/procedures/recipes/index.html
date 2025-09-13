@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>JEI Integration - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/plugin.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/JEI Integration/Procedures/Recipes/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/jei_integration/logo.png">
+      <h>Recipes</h>
+    </header>
+    <main>
+      <info-box title="Index">
+        <ul>
+          <li><a href="#getRecipeOutput">Get the output [Output Name] of the recipe type [Recipe] with the ingredients:</a></li>
+        </ul>
+      </info-box>
+
+      <section id="getRecipeOutput"></section>
+      <info-panel title="Get the output [Output Name] of the recipe type [Recipe] with the ingredients:">
+        <p>Used to get the output from the ingredients and the recipe type with the given name</p>
+        <slide-box>
+          <div>
+            <p>Get ItemStack Output</p>
+            <img src="/resources/plugin/jei_integration/procedures/recipes/getRecipeItemStackOutput.png">
+          </div>
+          <div>
+            <p>Get FluidStack Output</p>
+            <img src="/resources/plugin/jei_integration/procedures/recipes/getRecipeFluidStackOutput.png">
+          </div>
+          <div>
+            <p>Get Logic Output</p>
+            <img src="/resources/plugin/jei_integration/procedures/recipes/getRecipeLogicOutput.png">
+          </div>
+          <div>
+            <p>Get Number Output</p>
+            <img src="/resources/plugin/jei_integration/procedures/recipes/getRecipeNumberOutput.png">
+          </div>
+          <div>
+            <p>Get Text Output</p>
+            <img src="/resources/plugin/jei_integration/procedures/recipes/getRecipeTextOutput.png">
+          </div>
+        </slide-box>
+        <p>
+            Params:<br>
+            - Output Name: the name of the output<br>
+            - Recipe: the recipe type<br>
+            - Type: the type of the ingredient<br>
+            - Name: the unique name set in the recipe type<br>
+            - Consume: if true, it will consume the input if the recipe has an output<br>
+            Return:<br>
+            - the output of a recipe with the given name and the given ingredients<br>
+        </p>
+      </info-panel>
+    </main>
+  </body>
+</html>

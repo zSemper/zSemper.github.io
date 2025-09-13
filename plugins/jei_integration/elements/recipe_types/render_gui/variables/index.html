@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>JEI Integration - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/plugin.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/JEI Integration/Mod Elements/Recipe Types/Category Rendering/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/jei_integration/logo.png">
+      <h>Category Rendering</h>
+    </header>
+    <main>
+      <info-box title="Index">
+        <ul>
+          <li><a href="#getLogicValue">Get [IO] logic value with name [Name]</a></li>
+          <li><a href="#getNumberValue">Get [IO] number value with name [Name]</a></li>
+          <li><a href="#getTextValue">Get [IO] text value with name [Name]</a></li>
+          <li><a href="#getItemStackName">Get [IO] itemstack display name with name [Name]</a></li>
+          <li><a href="#getItemStackAmount">Get [IO] itemstack amount with name [Name]</a></li>
+          <li><a href="#getFluidStackName">Get [IO] fluidstack display name with name [Name]</a></li>
+          <li><a href="#getFluidStackAmount">Get [IO] fluidstack amount with name [Name]</a></li>
+        </ul>
+      </info-box>
+
+      <section id="getLogicValue"></section>
+      <info-panel title="Get [IO] logic value with name [Name]">
+        <p>Used to get the logic value set in the recipe</p>
+        <img src="/resources/plugin/jei_integration/rendering/variables/getLogicValue.png">
+        <p>
+            Params:<br>
+            - IO: the input or output selection<br>
+            - Name: the set slot name set in the Recipe Slots tab<br>
+            Return:<br>
+            - the logic value in the recipe or the default value if set to optional
+        </p>
+      </info-panel>
+
+      <section id="getNumberValue"></section>
+      <info-panel title="Get [IO] number value with name [Name]">
+        <p>Used to get the number value set in the recipe</p>
+        <img src="/resources/plugin/jei_integration/rendering/variables/getNumberValue.png">
+        <p>
+            Params:<br>
+            - IO: the input or output selection<br>
+            - Name: the set slot name set in the Recipe Slots tab<br>
+            Return:<br>
+            - the number value in the recipe or the default value if set to optional
+        </p>
+      </info-panel>
+
+      <section id="getTextValue"></section>
+      <info-panel title="Get [IO] text value with name [Name]">
+        <p>Used to get the text value set in the recipe</p>
+        <img src="/resources/plugin/jei_integration/rendering/variables/getTextValue.png">
+        <p>
+            Params:<br>
+            - IO: the input or output selection<br>
+            - Name: the set slot name set in the Recipe Slots tab<br>
+            Return:<br>
+            - the text value in the recipe or the default value if set to optional
+        </p>
+      </info-panel>
+
+      <section id="getItemStackName"></section>
+      <info-panel title="Get [IO] itemstack display name with name [Name]">
+        <p>Used to get the itemstack display name in the recipe</p>
+        <img src="/resources/plugin/jei_integration/rendering/variables/getItemStackName.png">
+        <p>
+            Params:<br>
+            - IO: the input or output selection<br>
+            - Name: the set slot name set in the Recipe Slots tab<br>
+            Return:<br>
+            - the itemstack display name in the recipe
+        </p>
+      </info-panel>
+
+      <section id="getItemStackAmount"></section>
+      <info-panel title="Get [IO] itemstack amount with name [Name]">
+        <p>Used to get the itemstack amount in the recipe</p>
+        <img src="/resources/plugin/jei_integration/rendering/variables/getItemStackAmount.png">
+        <p>
+            Params:<br>
+            - IO: the input or output selection<br>
+            - Name: the set slot name set in the Recipe Slots tab<br>
+            Return:<br>
+            - the itemstack amount in the recipe
+        </p>
+      </info-panel>
+
+      <section id="getFluidStackName"></section>
+      <info-panel title="Get [IO] fluidstack display name with name [Name]">
+        <p>Used to get the fluidstack display name in the recipe</p>
+        <img src="/resources/plugin/jei_integration/rendering/variables/getFluidStackName.png">
+        <p>
+            Params:<br>
+            - IO: the input or output selection<br>
+            - Name: the set slot name set in the Recipe Slots tab<br>
+            Return:<br>
+            - the fluidstack display name in the recipe
+        </p>
+      </info-panel>
+
+      <section id="getFluidStackAmount"></section>
+      <info-panel title="Get [IO] fluidstack amount with name [Name]">
+        <p>Used to get the logic value set in the recipe</p>
+        <img src="/resources/plugin/jei_integration/rendering/variables/getFluidStackAmount.png">
+        <p>
+            Params:<br>
+            - IO: the input or output selection<br>
+            - Name: the set slot name set in the Recipe Slots tab<br>
+            Return:<br>
+            - the fluidstack amount in the recipe
+        </p>
+      </info-panel>
+    </main>
+  </body>
+</html>

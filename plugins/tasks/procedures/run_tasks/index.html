@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/plugin.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/Tasks/Procedures/Run Tasks/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/tasks/logo.png">
+      <h>Run Tasks</h>
+    </header>
+    <main>
+      <info-box title="Index">
+        <ul>
+          <li><a href="#runTaskVoid">Run task [Task Name] from [Task Var]</a></li>
+          <li><a href="#runTaskReturn">Run task [Task Name] from [Task Var] and get value</a></li>
+          <li><a href="#runTaskCustom">Run task [Task Name] from [Task Var] and get [Type] value</a></li>
+          <!--
+            Run Void Task,
+            Run Task with return
+            Run Task with custom return
+          -->
+        </ul>
+      </info-box>
+
+      <section id="runTaskVoid"></section>
+      <info-panel title="Run task [Task Name] from [Task Var]">
+        <p>Runs the task with a specific name.</p>
+        <img src="/resources/plugin/tasks/run_tasks/runTaskVoid.png" />
+        <p>
+            Params:<br>
+            - Task Name: the name of the task that will be run<br>
+            - Task Var: the task variable where the task is saved<br>
+        </p>
+      </info-panel>
+
+      <section id="runTaskReturn"></section>
+      <info-panel title="Run task [Task Name] from [Task Var] and get value">
+        <p>Runs the task with a specific name and return a value.</p>
+        <slide-box>
+          <div>
+            <p>Run Action Result task</p>
+            <img src="/resources/plugin/tasks/run_tasks/runTaskActionresult.png">
+          </div>
+          <div>
+            <p>Run Blockstate task</p>
+            <img src="/resources/plugin/tasks/run_tasks/runTaskBlockstate.png">
+          </div>
+          <div>
+            <p>Run Direction task</p>
+            <img src="/resources/plugin/tasks/run_tasks/runTaskDirection.png">
+          </div>
+          <div>
+            <p>Run Entity task</p>
+            <img src="/resources/plugin/tasks/run_tasks/runTaskEntity.png">
+          </div>
+          <div>
+            <p>Run Itemstack task</p>
+            <img src="/resources/plugin/tasks/run_tasks/runTaskItemstack.png">
+          </div>
+          <div>
+            <p>Run Logic task</p>
+            <img src="/resources/plugin/tasks/run_tasks/runTaskBoolean.png">
+          </div>
+          <div>
+            <p>Run Number task</p>
+            <img src="/resources/plugin/tasks/run_tasks/runTaskNumber.png">
+          </div>
+          <div>
+            <p>Run Text task</p>
+            <img src="/resources/plugin/tasks/run_tasks/runTaskString.png">
+          </div>
+        </slide-box>
+         <p>
+            Params:<br>
+            - Task Name: the name of the task that will be run<br>
+            - Task Var: the task variable where the task is saved<br>
+            Return:<br>
+            - the value the task returns<br>
+         </p>
+      </info-panel>
+
+      <section id="runTaskCustom"></section>
+      <info-panel title="Run task [Task Name] from [Task Var] and get [Type] value">
+        <p>Runs a task with a specific name and a specific data type.</p>
+        <img src="/resources/plugin/tasks/run_tasks/runTaskCustom.png" />
+        <p>
+            Params:<br>
+            - Task Name: the name of the task that will be run<br>
+            - Task Var: the task variable where the task is saved<br>
+            - Type: a custom data type<br>
+            Return:<br>
+            - the value the task returns, or the default value if running the task fails<br>
+        </p>
+      </info-panel>
+    </main>
+  </body>
+</html>

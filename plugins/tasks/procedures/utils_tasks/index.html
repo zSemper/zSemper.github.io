@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/plugin.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/Tasks/Procedures/Task Utilities/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/tasks/logo.png">
+      <h>Task Utilities</h>
+    </header>
+    <main>
+      <info-box title="Index">
+        <ul>
+          <li><a href="#containsTask">Does [Task Var] contain task [Task Name]</a></li>
+        </ul>
+      </info-box>
+
+      <section id="containsTask"></section>
+      <info-panel title="Does [Task Var] contain task [Task Name]">
+        <p>Can be used to check if a task variable has a task under a specific name.</p>
+        <img src="/resources/plugin/tasks/utils_tasks/containsTask.png" />
+        <p>
+            Params:<br>
+            - Task: the task variable<br>
+            - Task Name: the name of the task to check<br>
+            Return:<br>
+            - true, if the task variable contains a task under the name<br>
+            - false, if the task variable does not contain a task under the name<br>
+        </p>
+      </info-panel>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/plugin.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/Tasks/Procedures/Create Tasks/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/tasks/logo.png">
+      <h>Create Tasks</h>
+    </header>
+    <main>
+      <info-box title="Index">
+        <ul>
+          <li><a href="#createTask">Create task [Task] with [Task Name] to [Task Var]</a></li>
+          <li><a href="#newTaskVoid">New Task with no return value</a></li>
+          <li><a href="#newTaskReturn">New Task with return value</a></li>
+          <li><a href="#newTaskCustom">New Task with [Type] return value</a></li>
+          <li><a href="#returnTaskValue">Return task [Value]</a></li>
+          <li><a href="#returnTaskCustom">Return task [Type]: [Value] or default value [Default]</a></li>
+        </ul>
+      </info-box>
+
+      <section id="createTask"></section>
+      <info-panel title="Create task [Task] with [Task Name] to [Task Var]">
+        <p>The main code block used to create a new task with a task name, that can be saved into a task variable. Every task needs a unique name for a task variable.</p>
+        <img src="/resources/plugin/tasks/create_tasks/createTask.png" />
+        <p>
+            Params:<br>
+            - Task: the task, that can be ran later<br>
+            - Task Name: the unique name of a task<br>
+            - Task Var: the task variable the tasks are gonna be saved under<br>
+        </p>
+      </info-panel>
+
+      <section id="newTaskVoid"></section>
+      <info-panel title="New Task with no return value">
+        <p>Creates a task that does not return a value.</p>
+        <img src="/resources/plugin/tasks/create_tasks/newTaskVoid.png" />
+      </info-panel>
+
+      <section id="newTaskReturn"></section>
+      <info-panel title="New Task with return value">
+        <p>Creates a task that returns a value when called.</p>
+        <slide-box>
+          <div>
+            <p>New Action Result task</p>
+            <img src="/resources/plugin/tasks/create_tasks/newTaskActionresult.png">
+          </div>
+          <div>
+            <p>New Blockstate task</p>
+            <img src="/resources/plugin/tasks/create_tasks/newTaskBlockstate.png">
+          </div>
+          <div>
+            <p>New Direction task</p>
+            <img src="/resources/plugin/tasks/create_tasks/newTaskDirection.png">
+          </div>
+          <div>
+            <p>New Entity task</p>
+            <img src="/resources/plugin/tasks/create_tasks/newTaskEntity.png">
+          </div>
+          <div>
+            <p>New Itemstack task</p>
+            <img src="/resources/plugin/tasks/create_tasks/newTaskItemstack.png">
+          </div>
+          <div>
+            <p>New Logic task</p>
+            <img src="/resources/plugin/tasks/create_tasks/newTaskBoolean.png">
+          </div>
+          <div>
+            <p>New Number task</p>
+            <img src="/resources/plugin/tasks/create_tasks/newTaskNumber.png">
+          </div>
+          <div>
+            <p>New Text task</p>
+            <img src="/resources/plugin/tasks/create_tasks/newTaskString.png">
+          </div>
+        </slide-box>
+      </info-panel>
+
+      <section id="newTaskCustom"></section>
+      <info-panel title="New Task with [Type] return value">
+        <p>Creates a task with a custom return value used for data types that come from plugins or are not included in the base MCreator.</p>
+        <img src="/resources/plugin/tasks/create_tasks/newTaskCustom.png" />
+        <p>
+            Params:<br>
+            - Type: a custom data type<br>
+        </p>
+      </info-panel>
+
+      <section id="returnTaskValue"></section>
+      <info-panel title="Return task [Value]">
+        <p>Used to return a value for the "New task" code blocks that return a value. The from MCreator provided return blocks wont work so use these ones.</p>
+        <slide-box>
+          <div>
+            <p>Return Action Result</p>
+            <img src="/resources/plugin/tasks/create_tasks/returnTaskActionresult.png">
+          </div>
+          <div>
+            <p>Return Blockstate</p>
+            <img src="/resources/plugin/tasks/create_tasks/returnTaskBlockstate.png">
+          </div>
+          <div>
+            <p>Return Direction</p>
+            <img src="/resources/plugin/tasks/create_tasks/returnTaskDirection.png">
+          </div>
+          <div>
+            <p>Return Entity</p>
+            <img src="/resources/plugin/tasks/create_tasks/returnTaskEntity.png">
+          </div>
+          <div>
+            <p>Return Itemstack</p>
+            <img src="/resources/plugin/tasks/create_tasks/returnTaskItemstack.png">
+          </div>
+          <div>
+            <p>Return Logic</p>
+            <img src="/resources/plugin/tasks/create_tasks/returnTaskBoolean.png">
+          </div>
+          <div>
+            <p>Return Number</p>
+            <img src="/resources/plugin/tasks/create_tasks/returnTaskNumber.png">
+          </div>
+          <div>
+            <p>Return Text</p>
+            <img src="/resources/plugin/tasks/create_tasks/returnTaskString.png">
+          </div>
+        </slide-box>
+      </info-panel>
+
+      <section id="returnTaskCustom"></section>
+      <info-panel title="Return task [Type]: [Value] or default value [Default]">
+        <p>Used to return a value with a custom type or a default value if the type is different to the type of the "New task" code block.</p>
+        <img src="/resources/plugin/tasks/create_tasks/returnTaskCustom.png" />
+        <p>
+            Params:<br>
+            - Type: a custom data type<br>
+            - Value: the value that will be returned<br>
+            - Default: the default value if data type of the "New task" block is different<br>
+        </p>
+      </info-panel>
+    </main>
+  </body>
+</html>

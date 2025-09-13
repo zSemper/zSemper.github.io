@@ -19,7 +19,7 @@ main info-box ul li {
     background-color: rgb(45, 45, 45);
     margin-left: 10px;
     list-style-type: square;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 main info-box ul li a {
@@ -41,6 +41,7 @@ main info-panel h1 {
 
 main info-panel img {
     width: auto;
+    height: 100%;
 }
 
 main info-panel info-panel {
@@ -55,19 +56,10 @@ main .image p {
     main info-panel :is(p, a) {
         font-size: 20px;
     }
-
-    main info-panel img {
-        height: 100%;
-    }
 }
 
 @media (orientation: portrait) {
     main info-panel :is(p, a) {
         font-size: 30px;
     }
-
-    main info-panel img {
-        height: 200%;
-    }
-
 }

@@ -295,123 +295,6 @@ class ModElementList extends HTMLElement {
 customElements.define("mod-element-list", ModElementList);
 
 
-// Multiblock Viewer
-class MultiblockViewer extends HTMLElement {
-  constructor() {
-    super();
-    const shadow = this.attachShadow({ mode: "open" });
-
-    const template = document.createElement("template");
-    template.innerHTML = `
-      <style>
-        :host {
-          display: block;
-          max-width: 400px;
-          margin: 20px auto;
-          font-family: sans-serif;
-        }
-        .container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-        }
-        .button {
-          background-color:rgb(86, 101, 117);
-          color: white;
-          border: none;
-          padding: 10px;
-          cursor: pointer;
-          font-size: 18px;
-          border-radius: 5px;
-          width:197px;
-        }
-        .button.disabled {
-          background-color: #ccc;
-          cursor: not-allowed;
-        }
-        .content {
-          text-align: center;
-        }
-        .image {
-          width: 400px;
-          height: 400px;
-          border-radius: 10px;
-        }
-        .title {
-          margin-bottom: 10px;
-          font-size: 18px;
-          font-weight: bold;
-          color:rgb(255, 255, 255);
-        }
-      </style>
-
-      <div class="container">
-        <div class="content">
-          <div class="title"></div>
-          <img class="image" />
-        <button id="prev" class="button">&larr;  Previous Layer</button>
-        <button id="next" class="button">Next Layer  &rarr;</button>
-        </div>
-      </div>
-    `;
-    shadow.appendChild(template.content.cloneNode(true));
-
-    this._prev = shadow.getElementById("prev");
-    this._next = shadow.getElementById("next");
-    this._img = shadow.querySelector(".image");
-    this._title = shadow.querySelector(".title");
-
-    this._data = [];
-    this._index = 0;
-
-    this._prev.addEventListener("click", () => this.navigate(-1));
-    this._next.addEventListener("click", () => this.navigate(1));
-  }
-
-  static get observedAttributes() {
-    return ["data"];
-  }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === "data") {
-      try {
-        this._data = JSON.parse(newValue);
-        this._index = 0;
-        this.render();
-      } catch (e) {
-        console.error("Invalid JSON data attribute:", e);
-      }
-    }
-  }
-
-  connectedCallback() {
-    if (this._data.length) this.render();
-  }
-
-  navigate(direction) {
-    const newIndex = this._index + direction;
-    if (newIndex >= 0 && newIndex < this._data.length) {
-      this._index = newIndex;
-      this.render();
-    }
-  }
-
-  render() {
-    const current = this._data[this._index];
-    if (!current) return;
-
-    this._img.src = current.img;
-    this._img.alt = current.title;
-    this._title.textContent = current.title;
-
-    this._prev.classList.toggle("disabled", this._index === 0);
-    this._next.classList.toggle("disabled", this._index === this._data.length - 1);
-  }
-}
-customElements.define("multiblock-viewer", MultiblockViewer);
-
-
 // Info Panel
 class InfoPanel extends HTMLElement {
   constructor() {
@@ -451,6 +334,9 @@ class InfoPanel extends HTMLElement {
         .content.open {
           display: block;
         }
+        ::slotted(*) {
+          background-color: rgb(45, 45, 45) !important;
+        }
         @media (orientation: landscape) {
           button {
             font-size: 30px;
@@ -458,7 +344,7 @@ class InfoPanel extends HTMLElement {
         }
         @media (orientation: portrait) {
           button {
-            font-size: 50px;
+            font-size: 40px;
           }
         }
       </style>
@@ -659,6 +545,7 @@ class InfoBox extends HTMLElement {
           display: block;
           flex-direction: column;
           margin-top: 10px;
+          padding-top: 15px !important;
           text-decoration: none;
         }
         ::slotted(a:hover) {
@@ -702,3 +589,116 @@ class InfoBox extends HTMLElement {
   }
 }
 customElements.define("info-box", InfoBox);
+
+
+// Slide Box
+class SlideBox extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: "open" });
+
+    const template = document.createElement("template");
+    template.innerHTML = `
+      <style>
+        :host {
+          display: block;
+          width: auto;
+          font-family: monospace;
+        }
+        .container {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          padding: 16px;
+          position: relative;
+          box-sizing: border-box;
+          overflow: hidden;
+          background-color: rgb(45, 45, 45);
+          color: white;
+        }
+        .content {
+          width: 100%;
+          height: calc(100% - 40px);
+          display: block;
+          padding-top: 5px;
+        }
+        .content ::slotted(*) {
+          display: none;
+        }
+        .content ::slotted(.active) { 
+          border-radius: 10px;
+          display: block;
+          background-color: rgb(45, 45, 45) !important;
+          font-size: 25px;
+        }
+        .buttons {
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 12px;
+          box-sizing: border-box;
+        }
+        button {
+          padding: 4px 10px;
+          font-size: 20px;
+          border-radius: 10px;
+          border: none;
+          background-color: rgb(75, 75, 75);
+          color: white;
+          cursor: pointer;
+        }
+        button:disabled {
+          background-color: rgb(35, 35, 35);
+          cursor: default;
+        }
+      </style>
+
+      <div class="container">
+        <div id="buttons">
+          <button id="prev">← Prev</button>
+          <button id="next">Next →</button>
+        </div>
+        <div class="content">
+          <slot></slot>
+        </div>
+      </div>
+    `;
+
+    shadow.appendChild(template.content.cloneNode(true));
+
+    this._slot = shadow.querySelector("slot");
+    this._prevBtn = shadow.querySelector("#prev");
+    this._nextBtn = shadow.querySelector("#next");
+    this._elements = [];
+    this._currentIndex = 0;
+  }
+
+  connectedCallback() {
+    this._slot.addEventListener("slotchange", () => {
+      this._elements = this._slot.assignedElements();
+      this._update();
+    });
+
+    this._prevBtn.addEventListener("click", () => this._go(-1));
+    this._nextBtn.addEventListener("click", () => this._go(1));
+  }
+
+  _go(direction) {
+    const newIndex = this._currentIndex + direction;
+    if (newIndex >= 0 && newIndex < this._elements.length) {
+      this._currentIndex = newIndex;
+      this._update();
+    }
+  }
+
+  _update() {
+    this._elements.forEach((el, i) =>
+      el.classList.toggle("active", i === this._currentIndex)
+    );
+    this._prevBtn.disabled = this._currentIndex === 0;
+    this._nextBtn.disabled = this._currentIndex === this._elements.length - 1;
+  }
+}
+customElements.define("slide-box", SlideBox);

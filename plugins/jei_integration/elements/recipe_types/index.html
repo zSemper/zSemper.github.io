@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>JEI Integration - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/guide.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/JEI Integration/Mod Elements/Recipe Types/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/jei_integration/logo.png">
+      <h>Recipe Types</h>
+    </header>
+    <main>
+      <info-box title="Properties">
+        <p>On the Properties tab the basic settings for the JEI category can be set.</p>
+        <img src="/resources/plugin/jei_integration/mod_elements/recipe_types/gui_properties.png">
+        <p>The JEI Texture is the texture that will be used as the background in the JEI category. The texture file has to be 256 x 256 pixel in size. The actual dimensions can be set using x, y, width and height fields.</p>
+        <p>The x and y set the texture position in the texture file and start from the top left and increase when going down and right. The width and height set the size of the part of the texture that will be used and start from the x and y position and add onto them.</p>
+        <br>
+        <br>
+        <p>The title and displayed icon will be the title and corresponding icon that will be shown in your JEI category.</p>
+        <p>The recipe blocks are all the blocks that support the recipe processing. For example if a mod adds a new furnace, that furnace will also be displayed in the vanilla furnace smelting category.</p>
+      </info-box>
+
+      <info-box title="Recipe Slots">
+        <p>The Recipe Slots tab is the main tab to set what inputs and outputs the recipes can have and where they will be displayed in JEI.</p>
+        <img src="/resources/plugin/jei_integration/mod_elements/recipe_types/gui_recipe_slots_1.png">
+        <p>Every slot has the IO option which determites, if the slot is either an input, output or a render. The input and output slots also require a type, which can either be an item, fluid, logic, number or text type, as well as a name, which has to be unique for each set slot.</p>
+        <p>Item and fluid slots also require an x and y coordinate, to set where they are located in the JEI category. Their coordinates follow the same principle as the JEI Texture.</p>
+        <br>
+        <br>
+        <p>Fluid slots have extra options to change their appearance in JEI. Their height can be set to appear above the normal slot height of 16 pixel.</p>
+        <p>The Use Full Tank option determites if the fluid is filled to the top of the slot, or has a size based on the size of the tank and the amount specified in a recipe.</p>
+        <img src="/resources/plugin/jei_integration/mod_elements/recipe_types/gui_recipe_tanks.png">
+        <br>
+        <br>
+        <p>Slots can also be set to optional, meaning they are not requires in a recipe.</p>
+        <img src="/resources/plugin/jei_integration/mod_elements/recipe_types/gui_recipe_slots_2.png">
+        <p>Logic, number and text slots require a default value, that is used when they are not set in a recipe.</p>
+        <br>
+        <br>
+        <p>Render slots are special slots as they are not used by recipes, but act as additional textures inside JEI categories. Like other slots they need a unique name, but only require a texture to be selected. They can be customized and animated using the blocks in the Render GUI tab.</p>
+        <img src="/resources/plugin/jei_integration/mod_elements/recipe_types/gui_recipe_render.png">
+      </info-box>
+
+      <info-box title="Render GUI">
+        <p>The Render GUI tab allows for extra rendered components, like text or textures, inside a JEI category.</p>
+        <img src="/resources/plugin/jei_integration/mod_elements/recipe_types/gui_render.png">
+        <p>While the basic blocks, like the normal logic, number and text blocks from the normal procedures are provided, the render editor also has some custom blocks.</p>
+        <br>
+        <p>The first one are the <a href="render_gui/render/" style="color: rgb(200, 200, 200);">Category Rendering</a> blocks which are the main blocks to add extra renders to the JEI category.</p>
+        <p>The <a href="render_gui/variables/" style="color: rgb(200, 200, 200);">Category Variables</a> can be used to get the logic, number and text variables set in the recipe.</p>
+        <p>Lastly the <a href="render_gui/misc/" style="color: rgb(200, 200, 200);">Misc Blocks</a> for some extra usage.</p>
+      </info-box>
+      
+      <info-box title="Clickable Areas">
+        <p>The Clickable Areas tab are an extra utility to connect GUIs to recipe types.</p>
+        <img src="/resources/plugin/jei_integration/mod_elements/recipe_types/gui_clickarea.png">
+        <p>Clickable Areas are fields in GUIs that, when clicked, open the JEI category and show all recipes in that category</p>
+        <p>To create a clickable area select a gui first, than specify the x and y postion and the width and height size of the area.</p>
+      </info-box>
+    </main>
+  </body>
+</html>

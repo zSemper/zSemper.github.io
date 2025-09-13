@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>JEI Integration - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/plugin.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/JEI Integration/Mod Elements/Recipe Types/Category Rendering/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/jei_integration/logo.png">
+      <h>Category Rendering</h>
+    </header>
+    <main>
+      <info-box title="Index">
+        <ul>
+          <li><a href="#renderText">Render text at x:[X] y:[Y] :[Text] with shadow:[Shadow]</a></li>
+          <li><a href="#renderTooltip">Render tooltip at x:[X] y:[Y] and a width:[Width] height:[Height] with lines:[Lines]</a></li>
+          <li><a href="#renderTexture">Render texture [Name] with a texture x: [X] and texture y:[Y] at gui x:[GX] gui y:[GY] with width:[Width] height:[Height]</a></li>
+          <li><a href="#getAnimatedWidth">Get animated width from a max width:[Width] and a duration:[Duration]</a></li>
+          <li><a href="#getAnimatedHeight">Get animated height from a max height:[Height] and a duration:[Duration]</a></li>
+        </ul>
+      </info-box>
+
+      <section id="renderText"></section>
+      <info-panel title="Render text at x:[X] y:[Y] :[Text] with shadow:[Shadow]">
+        <p>Used to get the result from the ingredients and the recipe type</p>
+        <img src="/resources/plugin/jei_integration/rendering/render/renderText.png">
+        <p>
+            Params:<br>
+            - X: the x position of the text<br>
+            - Y: the y position of the text<br>
+            - Text: the text rendered in the JEI category<br>
+            - Shadow: set true, if the rendered text should have a shadow<br>
+        </p>
+      </info-panel>
+
+      <section id="renderTooltip"></section>
+      <info-panel title="Render tooltip at x:[X] y:[Y] and a width:[Width] height:[Height] with lines:[Lines]">
+        <p>Used to get the amount of the result from the ingredients and the recipe type</p>
+        <img src="/resources/plugin/jei_integration/rendering/render/renderTooltip.png">
+        <p>
+            Params:<br>
+            - X: the x position of the tooltip field<br>
+            - Y: the y position of the tooltip field<br>
+            - Width: the width of the tooltip field<br>
+            - Height: the height of the tooltip field<br>
+            - Lines: the multiple lines shown as a tooltip<br> 
+        </p>
+      </info-panel>
+
+      <section id="renderTexture"></section>
+      <info-panel title="Render texture [Name] with a texture x: [X] and texture y:[Y] at gui x:[GX] gui y:[GY] with width:[Width] height:[Height]">
+        <p>Renders a texture set in the Recipe Slot tab</p>
+        <img src="/resources/plugin/jei_integration/rendering/render/renderTexture.png">
+        <p>
+            Params:<br>
+            - Name: the name of the set texture<br>
+            - TX: the x position of the texture in the texture file<br>
+            - TY: the y position of the texture in the texture file<br>
+            - GX: the x position of the render in the gui<br>
+            - GY: the y position of the render in the gui<br>
+            - Width: the width of the texture in the texture file<br>
+            - Height: the height of the texture in the texture file<br>
+        </p>
+      </info-panel>
+
+      <section id="getAnimatedWidth"></section>
+      <info-panel title="Get animated width from a max width:[Width] and a duration:[Duration]">
+        <p>Used to get an animated width that changes based on the duration</p>
+        <img src="/resources/plugin/jei_integration/rendering/render/getAnimatedWidth.png">
+        <p>
+            Params:<br>
+            - Width: the width of the texture<br>
+            - Duration: the time in ticks for the texture to be fully rendered<br>
+            Return:<br>
+            - a width based on the duration<br>
+        </p>
+      </info-panel>
+
+      <section id="getAnimatedHeight"></section>
+      <info-panel title="Get animated height from a max height:[Height] and a duration:[Duration]">
+        <p>Used to get an animated height that changes based on the duration</p>
+        <img src="/resources/plugin/jei_integration/rendering/render/getAnimatedHeight.png">
+        <p>
+            Params:<br>
+            - Height: the width of the texture<br>
+            - Duration: the time in ticks for the texture to be fully rendered<br>
+            Return:<br>
+            - a height based on the duration<br>
+        </p>
+      </info-panel>
+    </main>
+  </body>
+</html>

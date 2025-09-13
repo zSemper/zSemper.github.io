@@ -1,0 +1,7 @@
+variables_getLogicValue
+variables_getNumberValue
+variables_getTextValue
+variables_getItemStackName
+variables_getItemStackAmount
+variables_getFluidStackName
+variables_getFluidStackAmount

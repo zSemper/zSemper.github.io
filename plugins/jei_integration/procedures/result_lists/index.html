@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>JEI Integration - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/plugin.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/JEI Integration/Procedures/Result Lists/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/jei_integration/logo.png">
+      <h>Result Lists</h>
+    </header>
+    <main>
+      <info-box title="Index">
+        <ul>
+          <li><a href="#getRecipeOutputList">Get a list of [Output Type] output [Output Name] of the recipe type [Recipe] from the ingredients:</a></li>
+          <li><a href="#isEmpty">Is output list [List] empty</a></li>
+          <li><a href="#size">Get size of output list [List]</a></li>
+          <li><a href="#atIndex">Get [Type] output from result list [List] at index [Index]</a></li>
+          <li><a href="#contains">Does output list [List] contain [Type] output [Content]</a></li>
+          <li><a href="#getRandom">Get random [Type] result from output list [List]</a></li>
+          <li><a href="#forEach">For each [Type] output from output list [List] as [Iterator] do</a></li>
+          <li><a href="#plugin_addListToArrayList">Add output list [List] to arraylist [Arraylist]</a></li>
+        </ul>
+      </info-box>
+
+      <section id="getRecipeOutputList"></section>
+      <info-panel title="Get a list of [Output Type] output [Output Name] of the recipe type [Recipe] from the ingredients:">
+        <p>Used to get a list of every output from the given ingredients</p>
+        <img src="/resources/plugin/jei_integration/procedures/result_lists/getRecipeOutputList.png">
+        <p>
+            Params:<br>
+            - Output Type: the type of list<br>
+            - Output Name: the name of the output<br>
+            - Recipe: the recipe type<br>
+            - Type: the type of the ingredient<br>
+            - Name: the unique name set in the recipe type<br>
+            - Consume: if true, it will consume the input once if the recipe has at least one output<br>
+            Return:<br>
+            - A list of every recipe output from the given ingredients<br>
+        </p>
+      </info-panel>
+
+      <section id="isEmpty"></section>
+      <info-panel title="Is output list [List] empty">
+        <p>Used to get if the output list has any entries</p>
+        <img src="/resources/plugin/jei_integration/procedures/result_lists/isEmpty.png">
+        <p>
+            Params:<br>
+            - List: the output list<br>
+            Return:<br>
+            - true, if the list has entries<br>
+            - false, if the list is empty<br>
+        </p>
+      </info-panel>
+
+      <section id="size"></section>
+      <info-panel title="Get size of output list [List]">
+        <p>Gets the size of the output list</p>
+        <img src="/resources/plugin/jei_integration/procedures/result_lists/size.png">
+        <p>
+            Params:<br>
+            - List: the output list<br>
+            Return:<br>
+            - the size of the list<br>
+        </p>
+      </info-panel>
+
+      <section id="atIndex"></section>
+      <info-panel title="Get [Type] output from result list [List] at index [Index]">
+        <p>Gets the output at the specific index</p>
+        <img src="/resources/plugin/jei_integration/procedures/result_lists/atIndex.png">
+        <p>
+            Params:<br>
+            - Type: the type of the output<br>
+            - List: the output list<br>
+            - Index: the index in the list<br>
+            Return:<br>
+            - the output at the specific index<br>          
+        </p>
+      </info-panel>
+
+      <section id="contains"></section>
+      <info-panel title="Does output list [List] contain [Type] output [Content]">
+        <p>Used to check if the specified content is in the output list</p>
+        <img src="/resources/plugin/jei_integration/procedures/result_lists/contains.png">
+        <p>
+            Params:<br>
+            - List: the output list<br>
+            - Type: the type of output<br>
+            - Content: the content to check if it's in the list<br>
+            Return:<br>
+            - true, is the content is in the list<br>
+            - false, if the list does not contain the item<br>
+        </p>
+      </info-panel>
+
+      <section id="getRandom"></section>
+      <info-panel title="Get random [Type] result from output list [List]">
+        <p>Gets a random entry from the output list</p>
+        <img src="/resources/plugin/jei_integration/procedures/result_lists/getRandom.png">
+        <p>
+            Params:<br>
+            - Type: the type of output<br>
+            - List: the output list<br>
+            Return:<br>
+            - the random entry from the list<br>          
+        </p>
+      </info-panel>
+
+      <section id="forEach"></section>
+      <info-panel title="For each [Type] output from output list [List] as [Iterator] do">
+        <p>Iterates each entry in the output list as an output iterator</p>
+        <img src="/resources/plugin/jei_integration/procedures/result_lists/forEach.png">
+        <p>
+            Params:<br>
+            - Type: the type of output<br>
+            - List: the output list<br>
+            - Iterator: the output iterator block<br>
+        </p>
+      </info-panel>
+
+      <section id="plugin_addListToArrayList"></section>
+      <info-panel title="Add output list [List] to arraylist [Arraylist]">
+        <p>An addon for the arraylist plugin allowing to add all entries from the output list to an arraylist</p>
+        <img src="/resources/plugin/jei_integration/procedures/result_lists/plugin_addListToArrayList.png">
+        <p>
+            Params:<br>
+            - List: the output list<br>
+            - Arraylist: the arraylist the content is added to<br>
+        </p>
+      </info-panel>
+    </main>
+  </body>
+</html>
