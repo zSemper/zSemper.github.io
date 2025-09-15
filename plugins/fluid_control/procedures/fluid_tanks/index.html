@@ -30,10 +30,11 @@
           <li><a href="#drainTank">Drain [Amount] mB from Tank of Block at x:[X] y:[Y] z:[Z]</a></li>
           <li><a href="#drainFluidInTank">Drain [Amount] mB of [Fluid] from Tank of Block at x:[X] y:[Y] z:[Z]</a></li>
           <li><a href="#fillTank">Fill Tank with [Amount] mB of [Fluid] at Block x:[X] y:[Y] z:[Z]</a></li>
-          <li><a href="#getFluidFromTank">Get copy of Fluid from Tank of Block at x:[X] y:[Y] z:[Z]</a></li>
-          <li><a href="#getAmountInTank">Get Amount of Fluid in Tank at x:[X] y:[Y] z:[Z]</a></li>
-          <li><a href="#getTankSize">Get Size of Tank at x:[X] y:[Y] z:[Z]</a></li>
-          <li><a href="#isFluidValid">Can [Fluid] be inserted into Block at x:[X] y:[Y] z:[Z]</a></li>
+          <li><a href="#getFluidInTank">Get copy of Fluid from Tank [Tank] of Block at x:[X] y:[Y] z:[Z]</a></li>
+          <li><a href="#getAmountInTank">Get Amount of Fluid in Tank [Tank] at x:[X] y:[Y] z:[Z]</a></li>
+          <li><a href="#getTankSize">Get Size of Tank [Tank] at x:[X] y:[Y] z:[Z]</a></li>
+          <li><a href="#getTanks">Get number of tanks at x:[X] y:[Y] z:[Z]</a></li>
+          <li><a href="#isFluidValid">Can [Fluid] be inserted into Tank [Tank] at x:[X] y:[Y] z:[Z]</a></li>
           <li><a href="#interactWithFluidHandler">Can Item in [Hand] of [Entity] interact with Tank of Block at x:[X] y:[Y] z:[Z]</a></li>
         </ul>
       </info-box>
@@ -94,22 +95,23 @@
         </p>
       </info-panel>
 
-      <section id="getFluidFromTank"></section>
-      <info-panel title="Get copy of Fluid from Tank of Block at x:[X] y:[Y] z:[Z]">
+      <section id="getFluidInTank"></section>
+      <info-panel title="Get copy of Fluid from Tank [Tank] of Block at x:[X] y:[Y] z:[Z]">
         <p>Used to get the specific fluid inside a tank of a block at a specific block position.</p>
-        <img src="/resources/plugin/fluid_control/fluid_tanks/get_fluid_from_tank.png" />
+        <img src="/resources/plugin/fluid_control/fluid_tanks/get_fluid_in_tank.png" />
         <p>
             Params:<br>
             - X: the x coord of the block<br>
             - Y: the y coord of the block<br>
             - Z: the z coord of the block<br>
+            - Tank: the index of the tank<br>
             Return:<br>
             - the fluid inside the block as a FluidStack<br>
         </p>
       </info-panel>
 
       <section id="getAmountInTank"></section>
-      <info-panel title="Get Amount of Fluid in Tank at x:[X] y:[Y] z:[Z]">
+      <info-panel title="Get Amount of Fluid in Tank [Tank] at x:[X] y:[Y] z:[Z]">
         <p>Used to get the amount of fluid inside a tank of a block at a specific block position</p>
         <img src="/resources/plugin/fluid_control/fluid_tanks/get_amount_in_tank.png" />
         <p>
@@ -117,13 +119,14 @@
             - X: the x coord of the block<br>
             - Y: the y coord of the block<br>
             - Z: the z coord of the block<br>
+            - Tank: the index of the tank<br>
             Return:<br>
             - the amount in the tank
         </p>
       </info-panel>
 
       <section id="getTankSize"></section>
-      <info-panel title="Get Size of Tank at x:[X] y:[Y] z:[Z]">
+      <info-panel title="Get Size of Tank [Tank] at x:[X] y:[Y] z:[Z]">
         <p>Used to get the size of a tank of a block at a specific block position</p>
         <img src="/resources/plugin/fluid_control/fluid_tanks/get_tank_size.png" />
         <p>
@@ -131,13 +134,28 @@
             - X: the x coord of the block<br>
             - Y: the y coord of the block<br>
             - Z: the z coord of the block<br>
+            - Tank: the index of the tank<br>
             Return:<br>
             - the maximum size of the tank<br>
         </p>
       </info-panel>
 
+      <section id="getTanks"></section>
+      <info-panel title="Get number of tanks at x:[X] y:[Y] z:[Z]">
+        <p>Used to get number of tanks a block at specific block position has</p>
+        <img src="/resources/plugin/fluid_control/fluid_tanks/get_tanks.png">
+        <p>
+            Params:<br>
+            - X: the x coord of the block<br>
+            - Y: the y coord of the block<br>
+            - Z: the z coord of the block<br>
+            Return:<br>
+            - the number of tanks in a block<br>
+        </p>
+      </info-panel>
+
       <section id="isFluidValid"></section>
-      <info-panel title="Can [Fluid] be inserted into Block at x:[X] y:[Y] z:[Z]">
+      <info-panel title="Can [Fluid] be inserted into Tank [Tank] at x:[X] y:[Y] z:[Z]">
         <p>Can be used to check if a fluid can be put into a tank of a block at a speicific block position. This is only really applicable for blocks that have a fluid filter for the tank.</p>
         <img src="/resources/plugin/fluid_control/fluid_tanks/is_fluid_valid.png" />
         <p>
@@ -146,6 +164,7 @@
             - X: the x coord of the block<br>
             - Y: the y coord of the block<br>
             - Z: the z coord of the block<br>
+            - Tank: the index of the tank<br>
             Return:<br>
             - true, if the fluid can be put into the tank (will return true for almost every tank)<br>
             - false, if the fluid cannot be put into the tank

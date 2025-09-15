@@ -32,10 +32,10 @@
           <li><a href="#canHydrate">Can [Entity] by hydrated in [Fluid]</a></li>
           <li><a href="#canPushEntity">Can [Fluid] push [Entity]</a></li>
           <li><a href="#canSwin">Can [Entity] swim in [Fluid]</a></li>
-          <li><a href="#getDensity">Get Density of [Fluid]</a></li>
           <li><a href="#getFallDistanceModifier">Get Fall Distance Modifier of [Entity] if [Fluid]</a></li>
-          <li><a href="#getLightLevel">Get Light Level of [Fluid]</a></li>
           <li><a href="#getMotionScale">Get Motion Scale of [Entity] in [Fluid]</a></li>
+          <li><a href="#getDensity">Get Density of [Fluid]</a></li>
+          <li><a href="#getLightLevel">Get Light Level of [Fluid]</a></li>
           <li><a href="#getTemperature">Get Temperature of [Fluid]</a></li>
           <li><a href="#getViscosity">Get Viscosity of [Fluid]</a></li>
         </ul> 
@@ -124,18 +124,6 @@
         </p>
       </info-panel>
 
-      <section id="getDensity"></section>
-      <info-panel title="Get Density of [Fluid]">
-        <p>Used to get the density of the fluid.</p>
-        <img src="/resources/plugin/fluid_control/fluid_type/getDensity.png" />
-        <p>
-          Params:<br>
-          - Fluid: the fluid to get the density<br>
-          Return:<br>
-          - the density of the fluid
-        </p>
-      </info-panel>
-
       <section id="getFallDistanceModifier"></section>
       <info-panel title="Get Fall Distance Modifier of [Entity] in [Fluid]">
         <p>Used to get the fall distance modifier of the entity when submerged in a fluid.</p>
@@ -149,18 +137,6 @@
         </p>
       </info-panel>
 
-      <section id="getLightLevel"></section>
-      <info-panel title="Get Light Level of [Fluid]">
-        <p>Used to get the light level the fluid emits.</p>
-        <img src="/resources/plugin/fluid_control/fluid_type/getLightLevel.png" />
-        <p>
-          Params:<br>
-          - Fluid: the fluid to get the light level<br>
-          Return:<br>
-          - the light level<br>
-        </p>
-      </info-panel>
-
       <section id="getMotionScale"></section>
       <info-panel title="Get Motion Scale of [Entity] in [Fluid]">
         <p>Used to get the motion scale of an entity in a fluid</p>
@@ -171,6 +147,30 @@
           - Fluid: the fluid that is used for the entity<br>
           Return:<br>
           - the motion scale of the entity in the fluid<br>
+        </p>
+      </info-panel>
+
+      <section id="getDensity"></section>
+      <info-panel title="Get Density of [Fluid]">
+        <p>Used to get the density of the fluid.</p>
+        <img src="/resources/plugin/fluid_control/fluid_type/getDensity.png" />
+        <p>
+          Params:<br>
+          - Fluid: the fluid to get the density<br>
+          Return:<br>
+          - the density of the fluid
+        </p>
+      </info-panel>
+
+      <section id="getLightLevel"></section>
+      <info-panel title="Get Light Level of [Fluid]">
+        <p>Used to get the light level the fluid emits.</p>
+        <img src="/resources/plugin/fluid_control/fluid_type/getLightLevel.png" />
+        <p>
+          Params:<br>
+          - Fluid: the fluid to get the light level<br>
+          Return:<br>
+          - the light level<br>
         </p>
       </info-panel>
 
