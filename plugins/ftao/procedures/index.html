@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>FTaO - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/plugin.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/FTaO/Procedures</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/ftao/logo.png">
+      <h>Procedures</h>
+    </header>
+    <main>
+      <info-box title="Index">
+        <ul>
+          <li><a href="#setFluidInTank">Set Fluid [Fluid] with [Amount] mB in tank [Tank] of block at x:[X] y:[Y] z:[Z]</a></li>
+          <li><a href="#getFluid">Get Fluid [Fluid]</a></li>
+        </ul>
+      </info-box>
+
+      <section id="setFluidInTank"></section>
+      <info-panel title="Set Fluid [Fluid] with [Amount] mB in tank [Tank] of block at x:[X] y:[Y] z:[Z]">
+        <p>Used to set the fluid in a tank of a block at specific position. This block will ONLY work correctly on mods created with this plugin, any other mod with multiple fluid tanks WON'T work!</p>
+        <img src="/resources/plugin/ftao/procedures/set_fluid_in_tank.png">
+        <p>
+            Params:<br>
+            - Fluid: the fluid the tank contents will be set to<br>
+            - Amount: the amount of the fluid<br>
+            - Tank: the index of the tank<br>
+            - X: the x coord of the block<br>
+            - Y: the y coord of the block<br>
+            - Z: the z coord of the block<br>
+        </p>
+      </info-panel>
+
+      <section id="getFluid"></section>
+      <info-panel title="Get Fluid [Fluid]">
+        <p>Used to select a fluid from the workspace. Work exactly like the <a href="/plugins/fluid_control/procedures/fluids/#getFluidStack/">Get Fluid block</a> from fluid control.</p>
+        <img src="/resources/plugin/fluid_control/fluids/getFluidStack.png">
+      </info-panel>
+    </main>
+  </body>
+</html>

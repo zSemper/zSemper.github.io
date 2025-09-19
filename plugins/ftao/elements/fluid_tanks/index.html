@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>FTaO - Semper Modding</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/web/css/guide.css">
+    <script type="module" src="/web/js/elements.js"></script>
+    <script src="/web/js/search.js"></script>
+  </head>
+  <body>
+    <div class="taskbar">
+      <a href="/plugins/">
+        <img src="/resources/main/home.png">
+      </a>
+      <a href="javascript:history.back()">
+        <img src="/resources/main/back.png">
+      </a>
+      <p>Plugins/FTaO/Mod Elements/Fluid Tanks/</p>
+    </div>
+    <header>
+      <img src="/resources/plugin/ftao/logo.png">
+      <h>Fluid Tanks</h>
+    </header>
+    <main>
+      <info-box title="Fluid Tanks">
+        <p>To add extra fluid tanks to a block, you first need to select a block, that already has a fluid tank.</p>
+        <img src="/resources/plugin/ftao/mod_elements/gui_select_block.png">
+        <p>Additionally you can set the type of the tank next to the block selection. When set to input the tank can only be filled, but not drained, with output being the opposite. Setting it to default means that it can both be drained and filled.</p>
+        <p>The priority of which tanks are being filled and drained is determined by the index and the type of the tank. Tanks that are set to either input or output will be filled or drained first, and tanks that are set to default will be filled or drained last. The same applies with the index, where a tank with a lower index will be interacted first.</p>
+        <br>
+        <p>Extra tanks have the same configurations are the normal tank in a block, with an additional index and type.</p>
+        <img src="/resources/plugin/ftao/mod_elements/gui_tanks.png" style="width: 99%;">
+        <p>The index will start at 1 for the tanks, as the tank with the index 0 is the tank set up in the selected block.</p>
+      </info-box>
+
+      <info-box title="Fluid Overlays">
+        <p>Fluid overlays are like slots for fluids that can be added to a gui and show the contents of the selected tank in the gui together with a tooltip showing the fluid name and amount compared to the tank size. A difference to slots is that fluid overlays do not have a background like slots have, and need to be manually added as an image in the gui.</p>
+        <p>To now show the contents of the tank in a GUI, you first need to select the gui bound to the selected block. If you don't need the fluid overlays you can leave the gui selection empty.</p>
+        <img src="/resources/plugin/ftao/mod_elements/gui_select_gui.png">
+        <br>
+        <p>To add a fluid overlay to the selected gui you first need to set the index of which tank should be used.</p>
+        <img src="/resources/plugin/ftao/mod_elements/gui_overlays.png">
+        <p>After that you need to set the x and y position of the overlay. The top left of the gui is where x and y are 0 and increase when going right and downwards.</p>
+        <p>The height controls how tall the overlay should be and is added onto the the y position. It is recommended to set the height to a multiple of 16, to not be cut off at the top, but any height works.</p>
+      </info-box>
+    </main>
+  </body>
+</html>
