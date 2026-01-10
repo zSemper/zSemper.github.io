@@ -24,52 +24,87 @@
       <h>Changelogs</h>
     </header>
     <main>
+      <info-box title="1.6.0">
+        <ul>
+          <li><p>Added call procedure and get return blocks</p></li>
+          <li><p>Cleaned up code</p></li>
+          <li><p>Fixed issues with itemstack output from procedure blocks not getting formatted correctly</p></li>
+        </ul>
+      </info-box>
+
+      <info-box title="1.5.1">
+        <ul>
+          <li><p>Added iteration for every valid recipe of a recipe type</p></li>
+          <li><p>Fixed getting fluid amount and display name for 21.4 and 21.8</p></li>
+          <li><p>Fixed recipe types with optional text</p></li>
+          <li><p>Fixed code connection to get text output procedure block</p></li>
+        </ul>
+      </info-box>
+
+      <info-box title="1.5.0">
+        <ul>
+          <li><p>Added procedure blocks to get the result of vanilla recipe types (like crafting or smelting)</p></li>
+        </ul>
+      </info-box>
+
+      <info-box title="1.4.4">
+        <ul>
+          <li><p>Added fallback for when no icon for the jei category is selected</p></li>
+          <li><p>Removed deprecated code</p></li>
+          <li><p>Fixed Tooltips in jei category</p></li>
+        </ul>
+      </info-box>
+
+      <info-box title="1.4.3">
+        <ul>
+          <li><p>Moved reuseable methods into it's own class</p></li>
+          <li><p>Updated to mcreator 2025.3</p></li>
+        </ul>
+      </info-box>
+
+      <info-box title="1.4.2">
+        <ul>
+          <li><p>Removed deprecated methods</p></li>
+        </ul>
+      </info-box>
+
+      <info-box title="1.4.1">
+        <ul>
+          <li><p>Fixed issue with recipe/slot names starting with a number resulting in a compile error</p></li>
+        </ul>
+      </info-box>
+
+      <info-box title="1.4.0">
+        <ul>
+          <li><p>Fixed issues with recipe template and jei plugin template (cause mojang needs to change their code every version for some stupid reason)</p></li>
+        </ul>
+      </info-box>
+
+      <info-box title="1.3.0">
+        <ul>
+          <li><p>Recipes can now be bookmarked in jei</p></li>
+          <li><p>Moved click areas to properties tab instead to having it's own tab</p></li>
+        </ul>
+      </info-box>
+
+      <info-box title="1.2.0">
+        <ul>
+          <li><p>Rendered texts in jei now require a color</p></li>
+          <li><p>Outputs can be set to optional</p></li>
+          <li><p>Number inputs can now be consumed by using the designed blocks</p></li>
+          <li><p>Fixed number compare block missing code</p></li>
+        </ul>
+      </info-box>
+      <info-box title="1.1.0">
+        <ul>
+          <li><p>Fixed a bunch of code connected to optional ingredients</p></li>
+          <li><p>Added single item ingredient option</p></li>
+        </ul>
+      </info-box>
+
       <info-box title="1.0.0">
         <ul>
           <li><p>Initial Release</p></li>
-        </ul>
-      </info-box>
-
-      <info-box title="2.1.0" style="display: none;">
-        <ul>
-          <li><p>JEI Recipe Types:</p></li>
-          <li><p>Recipe Types now have a clickable area for guis (more info in help box)</p></li>
-          <li><p>Recipe Types now require a unique slot name for every slot other than the output</p></li>
-          <li><p>Item Input Slots can now be marked as optional and are not required in jei recipes, but they are still required in procedures, tho providing the input as air works just fine</p></li>
-          <li><p>Recipe Types now also support fluid slots</p></li>
-          <br>
-          <li><p>JEI Recipes:</p></li>
-          <li><p>Jei Recipes have been completely reworked, and require the unique slot names set in the jei recipe type to work</p></li>
-          <li><p>Jei Recipes now also support fluids as input ingredients</p></li>
-          <li><p>Item Ingredients can now also be greater than 1</p></li>
-          <br>
-          <li><p>Procedures:</p></li>
-          <li><p>Recipe procedures now also require the unique slot name</p></li>
-          <li><p>Recipe procedures now also have an consume option, that will consume the marked item and/or fluid, if the recipe was successful</p></li>
-          <li><p>Added new "Get item in slot of block at x y z" procedure block that returns the item in the specified slot of a block (instead of a copy of the item, like in the default MCreator procedure block)</p></li>
-          <li><p>Added new "Get fluid in tank of block at x y z" procedure block that returns the fluid in the specified tank of a block</p></li>
-          <li><p>Both "Get item" and "Get fluid" procedure blocks, are supposed to be primarily used together with the consume option</p></li>
-          <li><p>Added new "Set item with amount in slot at x y z while accounting for the existing amount" procedure block that set the item in a specified slot, while also setting the amount accourdingly, if the slot already has items in it (primarily used for when setting the recipe output)</p></li>
-          <br>
-          <li><p>Minor Changes:</p></li>
-          <li><p>Some Helpbox texts have been tweaked to be better understandable</p></li>
-          <li><p>Different procedures now have they own sub categories</p></li>
-          <li><p>Information and Anvil Recipe Mod Elements now have larger GUI elements</p></li>
-        </ul>
-      </info-box>
-
-      <info-box title="2.0.0" style="display: none;">
-        <ul>
-          <li><p>Added new procedures:</p></li>
-          <li><p>Checking if a recipe with specific ingredients is a valid recipe</p></li>
-          <li><p>Getting the output amount for a recipe</p></li>
-          <li><p>Getting every output for a recipe as a result list, if multiple recipes have the same inputs</p></li>
-          <li><p>Iterating every output in a result list</p></li>
-          <li><p>Getting a random output from the result list</p></li>
-          <li><p>Get the size of the result list</p></li>
-          <li><p>Checking if the result list contains a specific output</p></li>
-          <li><p>Getting the output of the result list at a specific index</p></li>
-          <li><p>Adding the result list to an arraylist if the arraylists plugin is installed</p></li>
         </ul>
       </info-box>
     </main>
